@@ -7,8 +7,8 @@
         <div class="level1">
             <ul class="categories">
                 <li><a  @mouseover="hover1 = true" @mouseleave="hover1 = false" class="" >PARTICIPANTS DE SONATRACH</a></li>
-                <li><a href="/EOR"  @mouseover="hover2 = true" @mouseleave="hover2 = false" class="">RECUPERATION ASSISTE</a></li>
-                <li><a href="/etudes-des-cas" @mouseover="hover3 = true" @mouseleave="hover3 = false" class="">ETUDES DES CAS</a></li>
+                <li><a href="/EOR"  @mouseover="hover2 = true" @mouseleave="hover2 = false" class="">RÉCUPÉRATION ASSISTÉE</a></li>
+                <li><a href="/cas-injection-de-gaz" @mouseover="hover3 = true" @mouseleave="hover3 = false" class="">ETUDES DES CAS</a></li>
                 <li><a href="/representation-graphique" @mouseover="hover4 = true" @mouseleave="hover4 = false" class="">REPRESENTATION GRAPHIQUE</a></li>
                 <li class="usthb"><a  @mouseover="hover5 = true" @mouseleave="hover5 = false" class="" id="usthb">PARTICIPANTS DE L'USTHB</a></li>
             </ul>
@@ -203,7 +203,7 @@ export default {
 
 ._2hQvoO3Vd_i2Rzs3nkao3s nav .level1 ul.categories li {
     display: inline-block;
-    height: 53px;
+    height: 57px;
     border-bottom: 4px solid #fff;
     transition: all .3s
 }
