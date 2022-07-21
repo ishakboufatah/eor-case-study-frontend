@@ -66,7 +66,7 @@ export default {
 
         .cDpcGHeo8QEyJwmqR4QVC .title {
             position: absolute;
-            left: 50%;
+            right: 50%;
             top: 50%;
             display: block;
             z-index: 6;
@@ -82,7 +82,7 @@ export default {
             color: #000
         }
 
-        @media screen and (max-width:1023px) {
+        @media screen and (max-width:1093px) {
             .cDpcGHeo8QEyJwmqR4QVC .title h1 {
                 font-size: 16px;
                 line-height: 23px
@@ -116,7 +116,7 @@ export default {
             text-transform: uppercase
         }
 
-        @media screen and (max-width:1023px) {
+        @media screen and (max-width:1093px) {
             .cDpcGHeo8QEyJwmqR4QVC .content {
                 flex-wrap: wrap
             }
@@ -185,7 +185,7 @@ export default {
             z-index: 2
         }
         .right ._3MOJnJfUl9FrJpMqecbvje .content {
-            background: url("/src/assets/img/general/usthb1.png") center bottom / cover no-repeat;
+            background: url("/src/assets/img/general/res.jpg") center bottom / cover no-repeat;
             opacity: 1;
         }
         

@@ -7,9 +7,9 @@
         <div class="level1">
             <ul class="categories">
                 <li><a  @mouseover="hover1 = true" @mouseleave="hover1 = false" class="" >PARTICIPANTS DE SONATRACH</a></li>
-                <li><a href="/EOR"  @mouseover="hover2 = true" @mouseleave="hover2 = false" class="">RÉCUPÉRATION ASSISTÉE</a></li>
-                <li><a href="/cas-injection-de-gaz" @mouseover="hover3 = true" @mouseleave="hover3 = false" class="">ETUDES DES CAS</a></li>
-                <li><a href="/representation-graphique" @mouseover="hover4 = true" @mouseleave="hover4 = false" class="">REPRESENTATION GRAPHIQUE</a></li>
+                <li><router-link to="/miscible-Page/cas-injection-de-gaz"  @mouseover="hover2 = true" @mouseleave="hover2 = false" class="">RÉCUPÉRATION ASSISTÉE</router-link></li>
+                <li><router-link to="/cas-injection-de-gaz" @mouseover="hover3 = true" @mouseleave="hover3 = false" class="">ETUDES DES CAS</router-link></li>
+                <li><router-link to="/miscible-Page/representation-graphique" @mouseover="hover4 = true" @mouseleave="hover4 = false" class="">REPRESENTATION GRAPHIQUE</router-link></li>
                 <li class="usthb"><a  @mouseover="hover5 = true" @mouseleave="hover5 = false" class="" id="usthb">PARTICIPANTS DE L'USTHB</a></li>
             </ul>
         </div>
@@ -22,23 +22,23 @@
     </div>
     <div class="subnav" :class="{ active: hover2 }" @mouseover="hover2 = true" @mouseleave="hover2 = false">
         <ul>
-            <li><a href="/injection-de-gaz" class="">Par Injection De Gaz</a></li>
-            <li><a href="/injection-chimique" class="">Par Injection Chimique</a></li>
-            <li><a href="/injection-de-micro-organismes" class="">Par Injection de micro-organismes</a></li>
+            <li><a href="/miscible-Page/injection-de-gaz" class="">Par Injection De Gaz</a></li>
+            <li><a href="/miscible-Page/injection-chimique" class="">Par Injection Chimique</a></li>
+            <li><a href="/miscible-Page/injection-de-micro-organismes" class="">Par Injection de micro-organismes</a></li>
         </ul>
     </div>
     <div class="subnav" :class="{ active: hover3 }" @mouseover="hover3 = true" @mouseleave="hover3 = false">
         <ul>
-            <li><a href="/cas-injection-de-gaz" class="">Cas D'injection De Gaz</a></li>
-            <li><a href="/cas-injection-chimique" class="">Cas D'injection Chimique</a></li>
-            <li><a href="/cas-injection-de-micro-organismes" class="">Cas D'injection de micro-organismes</a></li>
+            <li><a href="/miscible-Page/cas-injection-de-gaz" class="">Cas D'injection De Gaz</a></li>
+            <li><a href="/miscible-Page/cas-injection-chimique" class="">Cas D'injection Chimique</a></li>
+            <li><a href="/miscible-Page/cas-injection-de-micro-organismes" class="">Cas D'injection de micro-organismes</a></li>
         </ul>
     </div>
     <div class="subnav" :class="{ active: hover4 }" @mouseover="hover4 = true" @mouseleave="hover4 = false">
         <ul>
-            <li><a href="/representation-cas-injection-de-gaz" class="">Représentation Des Cas D'injection De Gaz</a></li>
-            <li><a href="/representation-cas-injection-chimique" class="">Représentation Des Cas D'injection Chimique</a></li>
-            <li><a href="/representation-cas-injection-de-micro-organismes" class="">Représentation Des Cas D'injection de micro-organismes</a></li>
+            <li><a href="/miscible-Page/representation-cas-injection-de-gaz" class="">Représentation Des Cas D'injection De Gaz</a></li>
+            <li><a href="/miscible-Page/representation-cas-injection-chimique" class="">Représentation Des Cas D'injection Chimique</a></li>
+            <li><a href="/miscible-Page/representation-cas-injection-de-micro-organismes" class="">Représentation Des Cas D'injection de micro-organismes</a></li>
         </ul>
     </div>
     <div class="subnav usthb" :class="{ active: hover5 }" @mouseover="hover5 = true" @mouseleave="hover5 = false">
@@ -66,6 +66,7 @@
             <li><a href="/iap" class="">IAP</a></li>
         </ul>
     </div>
+    
 </header>
 </template>
 <script>
@@ -127,7 +128,7 @@ export default {
     box-sizing: inherit;
     background: #fff;
     max-width: 80%;
-    min-width: 1010px;
+    min-width: 1093px;
     width: 100%;
     height: 90px;
     margin: -20px auto 0;
@@ -184,7 +185,7 @@ export default {
     position: absolute;
     top: 33px;
     left: 80px;
-    right: 94px;
+    right: 0px;
     width: calc(100% - 150px);
 }
 

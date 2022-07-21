@@ -1,13 +1,15 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import GazInjection from '../views/GazInjection.vue'
 
 const routes = [
+
   {
     path: '/',
     name: 'home',
     component: HomeView
   },
+  
   {
     path: '/about',
     name: 'about',
@@ -16,16 +18,18 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   },
+ 
   {
     path: '/cas-injection-de-gaz',
     name: 'cas-injection-de-gaz',
-    component: GazInjection
+    component: GazInjection,
   },
 ]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHashHistory(),
   routes
+  
 })
 
 export default router

@@ -1,17 +1,32 @@
 <template>
-  <full-navbar></full-navbar>
+  <full-navbar v-if="windowWidth > 1093"></full-navbar>
+  <mini-navbar v-if="windowWidth < 1093"></mini-navbar>
   <router-view/>
 </template>
 <script>
 // @ is an alias to /src
 
 import FullNavbar from '@/components/FullNavbar.vue'
+import MiniNavbar from '@/components/MiniNavbar.vue'
 
 export default {
   name: 'App',
   components: {
-    FullNavbar
-  }
+    FullNavbar,
+    MiniNavbar
+  },
+  data() {
+    return {
+      windowWidth: window.innerWidth,
+      success: false
+    }
+  },
+  mounted() {
+    window.onresize = () => {
+      this.windowWidth = window.innerWidth
+    }
+  },
+
 }
 </script>
 <style>
