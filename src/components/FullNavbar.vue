@@ -6,45 +6,43 @@
         <div class="logo1"><a href="https://www.usthb.dz/" class=""><img src="../assets/img/header/logousthb.png"  ></a></div>
         <div class="level1">
             <ul class="categories">
-                <li><a  @mouseover="hover1 = true" @mouseleave="hover1 = false" class="" >PARTICIPANTS DE SONATRACH</a></li>
-                <li><router-link to="/miscible-Page/cas-injection-de-gaz"  @mouseover="hover2 = true" @mouseleave="hover2 = false" class="">RÉCUPÉRATION ASSISTÉE</router-link></li>
-                <li><router-link to="/cas-injection-de-gaz" @mouseover="hover3 = true" @mouseleave="hover3 = false" class="">ETUDES DES CAS</router-link></li>
-                <li><router-link to="/miscible-Page/representation-graphique" @mouseover="hover4 = true" @mouseleave="hover4 = false" class="">REPRESENTATION GRAPHIQUE</router-link></li>
-                <li class="usthb"><a  @mouseover="hover5 = true" @mouseleave="hover5 = false" class="" id="usthb">PARTICIPANTS DE L'USTHB</a></li>
+                <li><router-link to="/"  class="" >HOME</router-link></li>
+                <li><router-link to="/EorDatabase"    @mouseover="hover2 = true" @mouseleave="hover2 = false" class="" :class="{'active': subIsActive('/cas-injection-de-gaz')}">EOR DATABASE </router-link></li>
+                <li><a href="#" onclick="return false;"  @mouseover="hover3 = true" @mouseleave="hover3 = false" class="" :class="{'active': subIsActive('/EorClasPerm')}">CASE STUDY CLASSIFICATION</a></li>
+                <li><a href="#" onclick="return false;" @mouseover="hover1 = true" @mouseleave="hover1 = false" class="">AUTHOR</a></li>
+                
             </ul>
         </div>
     </nav>
-    <div class="subnav " :class="{ active: hover1 }" @mouseover="hover1 = true" @mouseleave="hover1 = false">
+    <div class="subnav " :class="{ active: hover1 | hover6 | hover7}"  @mouseover="hover1 = true" @mouseleave="hover1 = false">
         <ul>
-            <li><a class="">Maâmar Djarir</a></li>
-            <li><a class="">Selmi Farouk</a></li>
+            <li><a href="#" onclick="return false;" @mouseover="hover6 = true" @mouseleave="hover6 = false" class="">From SONATRACH</a></li>
+            <li><a href="#" onclick="return false;" @mouseover="hover7 = true" @mouseleave="hover7 = false" class="">From USTHB</a></li>
         </ul>
     </div>
     <div class="subnav" :class="{ active: hover2 }" @mouseover="hover2 = true" @mouseleave="hover2 = false">
         <ul>
-            <li><a href="/miscible-Page/injection-de-gaz" class="">Par Injection De Gaz</a></li>
-            <li><a href="/miscible-Page/injection-chimique" class="">Par Injection Chimique</a></li>
-            <li><a href="/miscible-Page/injection-de-micro-organismes" class="">Par Injection de micro-organismes</a></li>
+            <li><router-link to="/cas-injection-de-gaz" class="" :class="{'active': subIsActive( '/cas-injection-de-gaz')}">Miscible EOR</router-link></li>
+            <li><a href="#" onclick="return false;" class="">Chimical EOR</a></li>
+            <li><a href="#" onclick="return false;" class="">Microbial EOR</a></li>
         </ul>
     </div>
     <div class="subnav" :class="{ active: hover3 }" @mouseover="hover3 = true" @mouseleave="hover3 = false">
         <ul>
-            <li><a href="/miscible-Page/cas-injection-de-gaz" class="">Cas D'injection De Gaz</a></li>
-            <li><a href="/miscible-Page/cas-injection-chimique" class="">Cas D'injection Chimique</a></li>
-            <li><a href="/miscible-Page/cas-injection-de-micro-organismes" class="">Cas D'injection de micro-organismes</a></li>
+            <li><router-link to="/EorClasPerm"   class=""> By Permeability</router-link></li>
         </ul>
     </div>
     <div class="subnav" :class="{ active: hover4 }" @mouseover="hover4 = true" @mouseleave="hover4 = false">
         <ul>
-            <li><a href="/miscible-Page/representation-cas-injection-de-gaz" class="">Représentation Des Cas D'injection De Gaz</a></li>
-            <li><a href="/miscible-Page/representation-cas-injection-chimique" class="">Représentation Des Cas D'injection Chimique</a></li>
-            <li><a href="/miscible-Page/representation-cas-injection-de-micro-organismes" class="">Représentation Des Cas D'injection de micro-organismes</a></li>
+            <li><a href="#" class="">Représentation Des Cas D'injection De Gaz</a></li>
+            <li><a href="#" class="">Représentation Des Cas D'injection Chimique</a></li>
+            <li><a href="#" class="">Représentation Des Cas D'injection de micro-organismes</a></li>
         </ul>
     </div>
     <div class="subnav usthb" :class="{ active: hover5 }" @mouseover="hover5 = true" @mouseleave="hover5 = false">
         <ul>
-            <li><a  class="">Salhi Yassin</a></li>
-            <li><a  class="">Boufatah Ishak</a></li>
+            <li><a href="#" onclick="return false;" class="">Salhi Yassin</a></li>
+            <li><a href="#" onclick="return false;" class="">Boufatah Ishak</a></li>
  
         </ul>
     </div>
@@ -54,16 +52,16 @@
                     class="download">Biographie de M. le Président Directeur Général</a></li>
         </ul>
     </div>
-    <div class="subsubnav">
+    <div class="subsubnav" :class="{ active: hover7 }"  @mouseover="hover7 = true" @mouseleave="hover7 = false">
         <ul>
-            <li><a href="/objectifs-strategiques" class="">Objectifs stratégiques</a></li>
-            <li><a href="/methodes-de-travail" class="">Méthodes de travail</a></li>
-            <li><a href="/strategie-engagements" class="">Engagements</a></li>
+            <li><a href="#" onclick="return false;"   class="">Boufatah Ishak </a></li>
+            <li><a href="#" onclick="return false;"  class="">Salhi Yassin</a></li>
         </ul>
     </div>
-    <div class="subsubnav">
+    <div class="subsubnav" :class="{ active: hover6 }"  @mouseover="hover6 = true" @mouseleave="hover6 = false">
         <ul>
-            <li><a href="/iap" class="">IAP</a></li>
+            <li><a href="#" onclick="return false;" class="">Selmi Farouk</a></li>
+            <li><a href="#" onclick="return false;" class="">Maâmar Djarir</a></li>
         </ul>
     </div>
     
@@ -85,7 +83,17 @@ export default {
     hover3: false,
     hover4: false,
     hover5: false,
-  })
+    hover6: false,
+    hover7: false,
+  }),
+  methods: {
+  subIsActive(input) {
+    const paths = Array.isArray(input) ? input : [input]
+    return paths.some(path => {
+      return this.$route.path.indexOf(path) === 0 // current path starts with this path string
+    })
+  }
+}
 }
 </script>
 <style type="text/css">
@@ -220,7 +228,7 @@ export default {
     line-height: 23px
 }
 
-._2hQvoO3Vd_i2Rzs3nkao3s nav .level1 ul.categories li a:after {
+._2hQvoO3Vd_i2Rzs3nkao3s nav .level1 ul.categories li:not(:first-child) a:after {
     content: url("/src/assets/img/icons/arrow/grey.svg");
     margin-left: 5px;
     width: 10px;
@@ -234,7 +242,7 @@ export default {
     color: #0066FF
 }
 
-._2hQvoO3Vd_i2Rzs3nkao3s nav .level1 ul.categories li a.active:after {
+._2hQvoO3Vd_i2Rzs3nkao3s nav .level1 ul.categories li:not(:first-child) a.active:after {
     content: url("/src/assets/img/icons/arrow/orange.svg");
     margin-left: 5px;
     width: 10px;

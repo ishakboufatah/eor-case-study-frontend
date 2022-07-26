@@ -3,58 +3,62 @@
         <div class="patern"></div>
         <nav class="" :class="{ open: click6 }">
             <div class="main">
-                <div class="logo"><a href="/"><img src="../assets/img/header/sonatrach.png" alt="Sonatrach"></a>
+                <div class="logo"><a href="https://sonatrach.com/"><img src="../assets/img/header/sonatrach.png" alt="Sonatrach"></a>
                 </div>
                 <div class="burger" :class="{ open: click6 }" @click="click6 = !click6">
                     <span></span><span></span><span></span><span></span><span></span><span></span></div>
-                <div class="logo1"><a href="/"><img src="../assets/img/header/logousthb.png" alt="Sonatrach"></a>
+                <div class="logo1"><a href="https://www.usthb.dz/"><img src="../assets/img/header/logousthb.png" alt="Sonatrach"></a>
                 </div>
 
             </div>
             <div class="level1">
                 <ul class="categories">
-                    <li>
-                        <div class="mainPage"><a href="#"  @click="click1 = !click1" class="">PARTICIPANTS DE SONATRACH</a></div>
-                        <ul class="pages " :class="{ open: click1 }" >
 
-                            <li><a class="">Maâmar Djarir</a></li>
-                            <li><a class="">Selmi Farouk</a></li>
-                        </ul>
-                    </li>
                     <li>
-                        <div class="mainPage"><a  href="#"  @click="click2 = !click2" class="">PARTICIPANTS DE L'USTHB</a></div>
-                        <ul class="pages usthb" :class="{ open: click2 }">
-                            <li><a  class="">Salhi Yassin</a></li>
-                            <li><a class="">Boufatah Ishak</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="mainPage"><a  href="#"  @click="click3 = !click3" class="">RÉCUPÉRATION ASSISTÉE</a><a
-                                href="#" class="ctaArrow">→</a></div>
-                        <ul class="pages " :class="{ open: click3 }">
-                            <li><a href="#" class="">Par Injection De Gaz</a></li>
-                            <li><a href="#" class="">Par Injection Chimique</a></li>
-                            <li><a href="#" class="">Par Injection de micro-organismes</a></li>
+                        <div class="mainPage"><router-link  to="/"   @click="click3 = !click3" class="" >HOME</router-link><router-link
+                                to="/" class="ctaArrow">→</router-link></div>
+                        
+                
                             
-                        </ul>
+                        
                     </li>
                     <li>
-                        <div class="mainPage"><a  href="#"  @click="click4 = !click4" class="">ETUDES DES CAS</a><a
-                                href="#" class="ctaArrow">→</a></div>
+                        <div class="mainPage"><a href="#" onclick="return false;"   @click="click4 = !click4" class="titel" :class="{'active': subIsActive(['/cas-injection-de-gaz','/EorDatabase'])}">EOR DATABASE</a>
+                        <router-link to="/EorDatabase" class="ctaArrow" :class="{'active': false }">→</router-link></div>
                         <ul class="pages" :class="{ open: click4 }">
-                            <li><router-link to="/cas-injection-de-gaz" class="">Cas D'injection De Gaz</router-link></li>
-                            <li><a href="#" class="">Cas D'injection Chimique</a></li>
-                            <li><a href="#" class="">Cas D'injection de micro-organismes</a></li>
+                            <li><router-link to="/cas-injection-de-gaz" class="">Miscible EOR</router-link></li>
+                            <li><a href="#" onclick="return false;" class="">Chimical EOR</a></li>
+                            <li><a href="#" onclick="return false;" class="">Microbial EOR</a></li>
                             
                         </ul>
                     </li>
                     <li>
-                        <div class="mainPage"><a  href="#"  @click="click5 = !click5" class="">REPRESENTATION GRAPHIQUE</a><a
-                                href="#" class="ctaArrow">→</a></div>
+                        <div class="mainPage"><a  href="#" onclick="return false;" @click="click5 = !click5" class="titel" :class="{'active': subIsActive('/EorClasPerm')}">CASE STUDY CLASSIFICATION</a><a
+                                href="#" onclick="return false;" class="ctaArrow">→</a></div>
                         <ul class="pages" :class="{ open: click5 }">
-                            <li><a href="#" class="">Représentation Des Cas D'injection De Gaz</a></li>
-                            <li><a href="#" class="">Représentation Des Cas D'injection Chimique</a></li>
-                            <li><a href="#" class="">Représentation Des Cas D'injection de micro-organismes</a></li>
+                            <li><router-link to="/EorClasPerm"  class="">By Permeability</router-link></li>
+
+                            
+                        </ul>
+                    </li>
+                     <li>
+                        <div class="mainPage"><a  href="#" onclick="return false;"  @click="click1 = !click1" class="titel">AUTHOR</a><a
+                                href="#" onclick="return false;" class="ctaArrow">→</a></div>
+                        <ul class="pages" :class="{ open: click1 }">
+                             <li>
+                                <div class="mainPage"><a href="#" onclick="return false;" @click="click2 = !click2" class="subpages ">From SONATRACH</a></div>
+                                <ul class="subpages" :class="{ open: click2 }">
+                                    <li><a href="#" onclick="return false;" class="">Selmi Farouk</a></li>
+                                    <li><a href="#" onclick="return false;" class="">Maâmar Djarir</a></li>
+                                </ul>
+                            </li>
+                             <li>       
+                                <div class="mainPage"><a href="#" onclick="return false;" @click="click7 = !click7" class="subpages open">From USTHB</a></div>
+                                <ul class="subpages" :class="{ open: click7 }">
+                                    <li><a href="#" onclick="return false;" class="">Boufatah Ishak</a></li>
+                                    <li><a href="#" onclick="return false;" class="">Salhi Yassin</a></li>
+                                </ul>
+                            </li>
                             
                         </ul>
                     </li>
@@ -81,8 +85,16 @@ export default {
     click4: '',
     click5: '',
     click6: '',
+    click7: '',
   }),
-  
+  methods: {
+  subIsActive(input) {
+    const paths = Array.isArray(input) ? input : [input]
+    return paths.some(path => {
+      return this.$route.path.indexOf(path) === 0 // current path starts with this path string
+    })
+  }
+}
 }
 </script>
     <style type="text/css">
@@ -260,7 +272,7 @@ export default {
    
         }
 
-        .y--XIaJ1NwEOkrmQO5gAQ nav .level1 ul.categories li a:before {
+        .y--XIaJ1NwEOkrmQO5gAQ nav .level1 ul.categories li:not(:first-child) a.titel:before {
             content: url("/src/assets/img/icons/arrow/grey.svg");
             margin-right: 10px;
             width: 10px;
@@ -271,7 +283,7 @@ export default {
             color: #ff8500
         }
 
-        .y--XIaJ1NwEOkrmQO5gAQ nav .level1 ul.categories li a.active:before {
+        .y--XIaJ1NwEOkrmQO5gAQ nav .level1 ul.categories li:not(:first-child) a.titel.active:before {
             content: url("/src/assets/img/icons/arrow/orange.svg");
             margin-right: 15px;
             width: 10px;
