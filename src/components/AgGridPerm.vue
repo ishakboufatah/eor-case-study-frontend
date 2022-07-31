@@ -1,6 +1,6 @@
 <template>
 
-  <ag-grid-vue style="width: auto ; height: 400px" class="ag-theme-alpine" :columnDefs="columnDefs" :rowData="response"
+  <ag-grid-vue style="width: auto ; height: 400px;display: none;" class="ag-theme-alpine" :columnDefs="columnDefs" :rowData="response"
     :enableCharts=true :enableRangeSelection=true :popupParent="popupParent" :defaultColDef="defaultColDef"
     @grid-ready="onGridReady" :createChartContainer="createChartContainer" @column-resized="onColumnResized"
     @first-data-rendered="onFirstDataRendered" :chartThemeOverrides="chartThemeOverrides">
@@ -9,10 +9,10 @@
   <br>
   <div id="myChart" class="ag-theme-alpine my-chart"></div>
   <br>
-  <ag-grid-vue style="width: auto ; height: 400px" class="ag-theme-alpine" :columnDefs="columnDefs1" :rowData="rowData1"
+  <ag-grid-vue style="width: auto ; height: 400px;display: none;" class="ag-theme-alpine" :columnDefs="columnDefs1" :rowData="rowData1"
     :enableCharts=true :enableRangeSelection=true :popupParent="popupParent" :defaultColDef="defaultColDef"
     @grid-ready="onGridReady" :createChartContainer="createChartContainer" @column-resized="onColumnResized"
-    @first-data-rendered="onFirstDataRendered1" :chartThemeOverrides="chartThemeOverrides">
+    @first-data-rendered="onFirstDataRendered1" :chartThemeOverrides="chartThemeOverrides1">
 
   </ag-grid-vue>
   <br>
@@ -50,22 +50,31 @@ respone1.forEach(item => {
   respone.push({ field: item[0].value + " " + item[1].value, Recovery_factor: item[38].value, permeability: item[19].value })
 })
 let rowData1 = [
-  { permrange: "[0 - 5]", fields_number: 0 },
-  { permrange: "]5 - 10]", fields_number: 0 },
-  { permrange: "]10 - 15]", fields_number: 0 },
-  { permrange: "]15 - 20]", fields_number: 0 },
-  { permrange: "]20 - 25]", fields_number: 0 },
-  { permrange: "]25 - 30]", fields_number: 0 },
-  { permrange: "]30 - 35]", fields_number: 0 },
-  { permrange: "]35 - 40]", fields_number: 0 },
-  { permrange: "]40 - 45]", fields_number: 0 },
-  { permrange: "]45 - 50]", fields_number: 0 },
-  { permrange: "]50 - 60]", fields_number: 0 },
-  { permrange: "]60 - 70]", fields_number: 0 },
-  { permrange: "]70 - 80]", fields_number: 0 },
-  { permrange: "]80 - 90]", fields_number: 0 },
-  { permrange: "]90 - 100]", fields_number: 0 },
-  { permrange: ">100", fields_number: 0 },
+  { permrange: "[0 - 5] (md)", fields_number: 0 },
+  { permrange: "]5 - 10] (md)", fields_number: 0 },
+  { permrange: "]10 - 15] (md)", fields_number: 0 },
+  { permrange: "]15 - 20] (md)", fields_number: 0 },
+  { permrange: "]20 - 25] (md)", fields_number: 0 },
+  { permrange: "]25 - 30] (md)", fields_number: 0 },
+  { permrange: "]30 - 35] (md)", fields_number: 0 },
+  { permrange: "]35 - 40] (md)", fields_number: 0 },
+  { permrange: "]40 - 45] (md)", fields_number: 0 },
+  { permrange: "]45 - 50] (md)", fields_number: 0 },
+  { permrange: "]50 - 60] (md)", fields_number: 0 },
+  { permrange: "]60 - 70] (md)", fields_number: 0 },
+  { permrange: "]70 - 80] (md)", fields_number: 0 },
+  { permrange: "]80 - 90] (md)", fields_number: 0 },
+  { permrange: "]90 - 100] (md)", fields_number: 0 },
+  { permrange: "]100 - 200] (md)", fields_number: 0 },
+  { permrange: "]200 - 300] (md)", fields_number: 0 },
+  { permrange: "]300 - 400] (md)", fields_number: 0 },
+  { permrange: "]400 - 500] (md)", fields_number: 0 },
+  { permrange: "]500 - 600] (md)", fields_number: 0 },
+  { permrange: "]600 - 700] (md)", fields_number: 0 },
+  { permrange: "]700 - 800] (md)", fields_number: 0 },
+  { permrange: "]800 - 900] (md)", fields_number: 0 },
+  { permrange: "]900 - 1000] (md)", fields_number: 0 },
+  { permrange: "> 1000 (md)", fields_number: 0 },
 
 
 
@@ -76,8 +85,54 @@ respone.forEach(item => {
    if (item.permeability <= 5) {
     console.log(item.permeability);
     rowData1[0].fields_number = rowData1[0].fields_number + 1
-  } else if ( item.permeability > 5 && item.permeability < 10) {
+  } else if ( item.permeability > 5 && item.permeability <= 10) {
     rowData1[1].fields_number = rowData1[1].fields_number + 1
+  } else if ( item.permeability > 10 && item.permeability <= 15) {
+    rowData1[2].fields_number = rowData1[2].fields_number + 1
+  } else if ( item.permeability > 15 && item.permeability <= 20) {
+    rowData1[3].fields_number = rowData1[3].fields_number + 1
+  } else if ( item.permeability > 20 && item.permeability <= 25) {
+    rowData1[4].fields_number = rowData1[4].fields_number + 1
+  } else if ( item.permeability > 25 && item.permeability <= 30) {
+    rowData1[5].fields_number = rowData1[5].fields_number + 1
+  } else if ( item.permeability > 30 && item.permeability <= 35) {
+    rowData1[6].fields_number = rowData1[6].fields_number + 1
+  } else if ( item.permeability > 35 && item.permeability <= 40) {
+    rowData1[7].fields_number = rowData1[7].fields_number + 1
+  } else if ( item.permeability > 40 && item.permeability <= 45) {
+    rowData1[8].fields_number = rowData1[8].fields_number + 1
+  } else if ( item.permeability > 45 && item.permeability <= 50) {
+    rowData1[9].fields_number = rowData1[9].fields_number + 1
+  } else if ( item.permeability > 50 && item.permeability <= 60) {
+    rowData1[10].fields_number = rowData1[10].fields_number + 1
+  } else if ( item.permeability > 60 && item.permeability <= 70) {
+    rowData1[11].fields_number = rowData1[11].fields_number + 1
+  } else if ( item.permeability > 70 && item.permeability <= 80) {
+    rowData1[12].fields_number = rowData1[12].fields_number + 1
+  } else if ( item.permeability > 80 && item.permeability <= 90) {
+    rowData1[13].fields_number = rowData1[13].fields_number + 1
+  } else if ( item.permeability > 90 && item.permeability <= 100) {
+    rowData1[14].fields_number = rowData1[14].fields_number + 1
+  } else if ( item.permeability > 100 && item.permeability <= 200) {
+    rowData1[15].fields_number = rowData1[15].fields_number + 1
+  } else if ( item.permeability > 200 && item.permeability <= 300) {
+    rowData1[16].fields_number = rowData1[16].fields_number + 1
+  } else if ( item.permeability > 300 && item.permeability <= 400) {
+    rowData1[17].fields_number = rowData1[17].fields_number + 1
+  } else if ( item.permeability > 400 && item.permeability <= 500) {
+    rowData1[18].fields_number = rowData1[18].fields_number + 1
+  } else if ( item.permeability > 500 && item.permeability <= 600) {
+    rowData1[19].fields_number = rowData1[19].fields_number + 1
+  } else if ( item.permeability > 600 && item.permeability <= 700) {
+    rowData1[20].fields_number = rowData1[20].fields_number + 1
+  } else if ( item.permeability > 700 && item.permeability <= 800) {
+    rowData1[21].fields_number = rowData1[21].fields_number + 1
+  } else if ( item.permeability > 800 && item.permeability <= 900) {
+    rowData1[22].fields_number = rowData1[22].fields_number + 1
+  } else if ( item.permeability > 900 && item.permeability <= 1000) {
+    rowData1[23].fields_number = rowData1[23].fields_number + 1
+  } else if ( item.permeability > 1000) {
+    rowData1[24].fields_number = rowData1[24].fields_number + 1
   }
 }
 
@@ -120,7 +175,7 @@ export default {
       ],
       columnDefs1: [
         { headerName: "permeability range (md)", field: "permrange", resizable: true, width: 220, chartDataType: 'category' },
-        { headerName: "fields number", field: "fields_number", resizable: true, width: 300, chartDataType: 'series' },
+        { headerName: "number of fields ", field: "fields_number", resizable: true, width: 300, chartDataType: 'series' },
 
 
 
@@ -141,8 +196,34 @@ export default {
           enabled: false,
           text: 'Medals by Age',
         },
+        navigator: {
+    enabled: true,
+    min: 0.2,
+    max: 0.7,
+  },
         legend: {
-          position: 'right',
+          position: 'bottom',
+        },
+      },
+      column: {
+        axes: {
+          category: {
+            label: {
+              rotation: -60,
+            },
+          },
+        },
+      },
+    };
+      this.chartThemeOverrides1 = {
+      common: {
+        title: {
+          enabled: false,
+          text: 'Medals by Age',
+        },
+        
+        legend: {
+          position: 'bottom',
         },
       },
       column: {
@@ -160,14 +241,22 @@ export default {
     onFirstDataRendered(params) {
       var createRangeChartParams = {
         cellRange: {
+          
           rowStartIndex: 0,
           rowEndIndex: 71,
-          columns: ['field', 'permeability'],
+          chartType: 'customCombo',
+          columns: ['field',"Recovery_factor", 'permeability'],
         },
-        chartType: 'stackedColumn',
+        seriesChartTypes: [
+      
+      { colId: 'Recovery_factor', chartType: 'groupedColumn', secondaryAxis: true },
+      { colId: 'permeability', chartType: 'line', secondaryAxis: true }
+    ], 
+        suppressChartRanges: true,
         chartContainer: document.querySelector('#myChart'),
         aggFunc: 'sum',
       };
+      
       params.api.createRangeChart(createRangeChartParams);
     },
     onGridReady(params) {
