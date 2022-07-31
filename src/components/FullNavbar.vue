@@ -7,8 +7,8 @@
         <div class="level1">
             <ul class="categories">
                 <li><router-link to="/"  class="" >HOME</router-link></li>
-                <li><router-link to="/EorDatabase"    @mouseover="hover2 = true" @mouseleave="hover2 = false" class="" :class="{'active': subIsActive('/cas-injection-de-gaz')}">EOR DATABASE </router-link></li>
-                <li><a href="#" onclick="return false;"  @mouseover="hover3 = true" @mouseleave="hover3 = false" class="" :class="{'active': subIsActive('/EorClasPerm')}">CASE STUDY CLASSIFICATION</a></li>
+                <li><a href="#" onclick="return false;"     @mouseover="hover2 = true" @mouseleave="hover2 = false" class="" :class="{'active': subIsActive(['/cas-injection-de-gaz','/EorClasPerm'])}">EOR WORLDWIDE DATABASE </a></li>
+                <li><a href="#" onclick="return false;" >SONATRACH DATABASE</a></li>
                 <li><a href="#" onclick="return false;" @mouseover="hover1 = true" @mouseleave="hover1 = false" class="">AUTHOR</a></li>
                 
             </ul>
@@ -20,42 +20,37 @@
             <li><a href="#" onclick="return false;" @mouseover="hover7 = true" @mouseleave="hover7 = false" class="">From USTHB</a></li>
         </ul>
     </div>
-    <div class="subnav" :class="{ active: hover2 }" @mouseover="hover2 = true" @mouseleave="hover2 = false">
+    <div class="subnav" :class="{ active: hover2| hover8 | hover3 }" @mouseover="hover2 = true" @mouseleave="hover2 = false">
         <ul>
-            <li><router-link to="/cas-injection-de-gaz" class="" :class="{'active': subIsActive( '/cas-injection-de-gaz')}">Miscible EOR</router-link></li>
-            <li><a href="#" onclick="return false;" class="">Chimical EOR</a></li>
-            <li><a href="#" onclick="return false;" class="">Microbial EOR</a></li>
+            <li><a href="#" onclick="return false;" class="" @mouseover="hover8 = true" @mouseleave="hover8 = false" :class="{'active': subIsActive( '/cas-injection-de-gaz')}"> EOR Techniques</a></li>
+            <li><a href="#" onclick="return false;" class="">EOR Worldwide Distribution</a></li>
+            <li><a href="#" onclick="return false;" class=""  @mouseover="hover3 = true" @mouseleave="hover3 = false" :class="{'active': subIsActive('/EorClasPerm')}">EOR Distribution By Properties</a></li>
+            
         </ul>
     </div>
-    <div class="subnav" :class="{ active: hover3 }" @mouseover="hover3 = true" @mouseleave="hover3 = false">
+    <div class="subsubnav " :class="{ active: hover8 }" @mouseover="hover8 = true" @mouseleave="hover8 = false">
+        <ul>
+            <li><router-link to="/cas-injection-de-gaz" class="" :class="{'active': subIsActive( '/cas-injection-de-gaz')}">Miscible EOR</router-link></li>
+            <li><a href="#" onclick="return false;" class="">Chemical EOR</a></li>
+            <li><a href="#" onclick="return false;" class="">Thermal EOR</a></li>
+ 
+        </ul>
+    </div>
+    
+
+
+   
+    <div class="subsubnav" :class="{ active: hover3 }" @mouseover="hover3 = true" @mouseleave="hover3 = false">
         <ul>
             <li><router-link to="/EorClasPerm"   class=""> By Permeability</router-link></li>
         </ul>
     </div>
-    <div class="subnav" :class="{ active: hover4 }" @mouseover="hover4 = true" @mouseleave="hover4 = false">
-        <ul>
-            <li><a href="#" class="">Représentation Des Cas D'injection De Gaz</a></li>
-            <li><a href="#" class="">Représentation Des Cas D'injection Chimique</a></li>
-            <li><a href="#" class="">Représentation Des Cas D'injection de micro-organismes</a></li>
-        </ul>
-    </div>
-    <div class="subnav usthb" :class="{ active: hover5 }" @mouseover="hover5 = true" @mouseleave="hover5 = false">
-        <ul>
-            <li><a href="#" onclick="return false;" class="">Salhi Yassin</a></li>
-            <li><a href="#" onclick="return false;" class="">Boufatah Ishak</a></li>
- 
-        </ul>
-    </div>
-    <div class="subsubnav">
-        <ul>
-            <li><a target="_blank" href="https://sonatrach.com/wp-content/uploads/2020/03/Biographie_M.-HAKKAR.pdf"
-                    class="download">Biographie de M. le Président Directeur Général</a></li>
-        </ul>
-    </div>
+    
+
     <div class="subsubnav" :class="{ active: hover7 }"  @mouseover="hover7 = true" @mouseleave="hover7 = false">
         <ul>
             <li><a href="#" onclick="return false;"   class="">Boufatah Ishak </a></li>
-            <li><a href="#" onclick="return false;"  class="">Salhi Yassin</a></li>
+            <li><a href="#" onclick="return false;"  class="">Salhi Yacine</a></li>
         </ul>
     </div>
     <div class="subsubnav" :class="{ active: hover6 }"  @mouseover="hover6 = true" @mouseleave="hover6 = false">
@@ -85,6 +80,7 @@ export default {
     hover5: false,
     hover6: false,
     hover7: false,
+    hover8: false,
   }),
   methods: {
   subIsActive(input) {

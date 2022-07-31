@@ -2,21 +2,14 @@
     <div class="YPO1AZqVOG3JVS9MFFfBm CODE" style="">
         <div class="_1yjs1_SEnbYM4ZwUEjiHjN title">
             <div class="titleContent"><span class="label"></span>
-                <h1><strong><span style="color: #ff8500;">EOR DATABASE</span></strong>
+                <h1><strong><span style="color: #ff8500;">EOR CASE STADIES DATABASE</span></strong>
                 </h1>
             </div>
             <div class="traits">
                 <div class="trait"></div>
             </div>
         </div>
-        <div class="mainPicture">
-            <div class="_3MOJnJfUl9FrJpMqecbvje picture">
-                <div class="content"
-                    style="background: rgba(0, 0, 0, 0) url(&quot;https://sonatrach.com/wp-content/uploads/2018/08/tbwa_sonatrach_09_timimoun02_A14761.jpg&quot;) no-repeat scroll center center / cover; opacity: 1;">
-                    <img alt="" width="0" height="0">
-                </div>
-            </div>
-        </div>
+
         <div class="columns">
             <div class="columnContent">
 

@@ -2,7 +2,7 @@
   <div class="cDpcGHeo8QEyJwmqR4QVC">
     <div class="logo"><img src="../assets/img/general/logo_white.png" alt="Sonatrach"></div>
     <div class="title">
-        <h1 class="lighter"><strong>Récupération assistée des hydrocarbures .</strong><br><br><br><strong>Une base de données d'études des cas d'application EOR </strong></h1>
+        <h1 class="lighter"><strong>Enhanced Oil Recovery.</strong><br><br><br><strong>EOR case studies database </strong></h1>
     </div>
     <div class="content">
         <div class="left">
@@ -19,7 +19,7 @@
                     <img width="0" height="0" alt=""></div>
             </div>
         </div>
-    </div><button class="scroll"></button>
+    </div><button class="scroll" @click="goto('div1')"></button>
 </div>
 </template>
 
@@ -28,6 +28,13 @@ export default {
   name: 'PosterCom',
   props: {
     msg: String
+  },
+  methods: {
+    goto(id){
+      document.getElementById(id).scrollIntoView({
+        behavior: "smooth"
+      });
+    }
   }
 }
 </script>

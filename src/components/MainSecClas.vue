@@ -20,27 +20,27 @@
         <div class="columns">
             <div class="columnContent">
 
-                <h2><span class="firm"><strong>permeability influence on recovery factor </strong></span></h2>
-                <p>....................<br>
+                <h2><span class="firm"><strong>Permeability Impact On Oil Recovery</strong></span></h2>
+                <p>select items you want to plot a chart for it<br>&nbsp;</p>
+                <ul class="list_number">
 
-                    ..............................&nbsp;</p>
-                    <ul class="list_number">
-                    
                     <AgGridPerm fnn=4
-                            style="display: block;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
-                        </AgGridPerm>
-                        <div class="title">Table 1 : The effect of permeability on the recovery factor</div>
-                    
+                        style="display: block;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
+                    </AgGridPerm>
+                    <div class="title">Table 1 : The effect of permeability on the recovery factor</div>
 
-                    
+
+
+
+
 
 
 
                 </ul>
-                <div class="end"></div>
+
             </div>
-            
-            
+
+
 
 
         </div>
@@ -69,8 +69,16 @@ export default {
         hover3: false,
         hover4: false,
         hover5: false,
-    })
+
+    }),
+    mounted() {
+
+
+
+    }
 }
+
+
 </script>
     <style >
     body {
@@ -80,17 +88,19 @@ export default {
         overflow-x: hidden;
         color: #606060;
     }
-    .title{
-            font-size: 14px;
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    list-style: none;
-    line-height: 23px;
-    color: #000;
-    box-sizing: inherit;
-    text-align: center;
-    margin-bottom: 10px;
+    
+    .title {
+        font-size: 14px;
+        font-family: Avenir, Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        list-style: none;
+        line-height: 23px;
+        color: #000;
+        box-sizing: inherit;
+        text-align: center;
+        margin-bottom: 10px;
     }
+    
     blockquote,
     body,
     dd,

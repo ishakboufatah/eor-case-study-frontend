@@ -56,7 +56,7 @@
                                 <div class="mainPage"><a href="#" onclick="return false;" @click="click7 = !click7" class="subpages open">From USTHB</a></div>
                                 <ul class="subpages" :class="{ open: click7 }">
                                     <li><a href="#" onclick="return false;" class="">Boufatah Ishak</a></li>
-                                    <li><a href="#" onclick="return false;" class="">Salhi Yassin</a></li>
+                                    <li><a href="#" onclick="return false;" class="">Salhi Yacine</a></li>
                                 </ul>
                             </li>
                             
