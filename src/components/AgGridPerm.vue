@@ -6,17 +6,15 @@
     @first-data-rendered="onFirstDataRendered" :chartThemeOverrides="chartThemeOverrides">
 
   </ag-grid-vue>
-  <br>
-  <div id="myChart" class="ag-theme-alpine my-chart"></div>
-  <br>
+
   <ag-grid-vue style="width: auto ; height: 400px;display: none;" class="ag-theme-alpine" :columnDefs="columnDefs1" :rowData="rowData1"
     :enableCharts=true :enableRangeSelection=true :popupParent="popupParent" :defaultColDef="defaultColDef"
     @grid-ready="onGridReady" :createChartContainer="createChartContainer" @column-resized="onColumnResized"
     @first-data-rendered="onFirstDataRendered1" :chartThemeOverrides="chartThemeOverrides1">
 
   </ag-grid-vue>
-  <br>
-  <div id="myChart1" class="ag-theme-alpine my-chart"></div>
+
+
 
 
 
@@ -47,7 +45,7 @@ let respone1 = rowData[0]
 
 respone1.forEach(item => {
 
-  respone.push({ field: item[0].value + " " + item[1].value, Recovery_factor: item[38].value, permeability: item[19].value })
+  respone.push({ field: item[0].value + " " + item[1].value, Recovery_factor: item[39].value, permeability: item[21].value })
 })
 let rowData1 = [
   { permrange: "[0 - 5] (md)", fields_number: 0 },
@@ -168,7 +166,7 @@ export default {
       respone2: respone1,
       columnDefs: [
         { headerName: "field", field: "field", resizable: true, width: 220, chartDataType: 'category' },
-        { headerName: "Recovery factor", field: "Recovery_factor", resizable: true, width: 300, chartDataType: 'series' },
+        { headerName: "Incremental EOR Recovery Factor", field: "Recovery_factor", resizable: true, width: 300, chartDataType: 'series' },
         { headerName: "permeability (md)", field: "permeability", resizable: true, width: 300, chartDataType: 'series' },
 
 
@@ -193,13 +191,13 @@ export default {
     this.chartThemeOverrides = {
       common: {
         title: {
-          enabled: false,
-          text: 'Medals by Age',
+          enabled: true,
+          text: 'Permeability Impact On Oil Recovery',
         },
         navigator: {
     enabled: true,
     min: 0.2,
-    max: 0.7,
+    max: 0.8,
   },
         legend: {
           position: 'bottom',
@@ -218,8 +216,8 @@ export default {
       this.chartThemeOverrides1 = {
       common: {
         title: {
-          enabled: false,
-          text: 'Medals by Age',
+          enabled: true,
+          text: ' Case Studies Number Classified by Permeability Range',
         },
         
         legend: {
@@ -243,7 +241,7 @@ export default {
         cellRange: {
           
           rowStartIndex: 0,
-          rowEndIndex: 71,
+          rowEndIndex: 75,
           chartType: 'customCombo',
           columns: ['field',"Recovery_factor", 'permeability'],
         },

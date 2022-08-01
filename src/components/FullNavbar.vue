@@ -7,7 +7,7 @@
         <div class="level1">
             <ul class="categories">
                 <li><router-link to="/"  class="" >HOME</router-link></li>
-                <li><a href="#" onclick="return false;"     @mouseover="hover2 = true" @mouseleave="hover2 = false" class="" :class="{'active': subIsActive(['/cas-injection-de-gaz','/EorClasPerm'])}">EOR WORLDWIDE DATABASE </a></li>
+                <li><a href="#" onclick="return false;"     @mouseover="hover2 = true" @mouseleave="hover2 = false" class="" :class="{'active': subIsActive(['/cas-injection-de-gaz','/EorClasPerm','/EorClasWorldwide'])}">EOR WORLDWIDE DATABASE </a></li>
                 <li><a href="#" onclick="return false;" >SONATRACH DATABASE</a></li>
                 <li><a href="#" onclick="return false;" @mouseover="hover1 = true" @mouseleave="hover1 = false" class="">AUTHOR</a></li>
                 
@@ -23,7 +23,7 @@
     <div class="subnav" :class="{ active: hover2| hover8 | hover3 }" @mouseover="hover2 = true" @mouseleave="hover2 = false">
         <ul>
             <li><a href="#" onclick="return false;" class="" @mouseover="hover8 = true" @mouseleave="hover8 = false" :class="{'active': subIsActive( '/cas-injection-de-gaz')}"> EOR Techniques</a></li>
-            <li><a href="#" onclick="return false;" class="">EOR Worldwide Distribution</a></li>
+            <li><router-link to="/EorClasWorldwide"  class="">EOR Worldwide Distribution</router-link></li>
             <li><a href="#" onclick="return false;" class=""  @mouseover="hover3 = true" @mouseleave="hover3 = false" :class="{'active': subIsActive('/EorClasPerm')}">EOR Distribution By Properties</a></li>
             
         </ul>

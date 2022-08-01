@@ -1409,6 +1409,62 @@
 
 
                 </ul>
+                <h2><span class="firm"><strong>EOR FIELDS CASE STADIES IN UNITED STATES</strong></span></h2>
+                <p>.........&nbsp;:</p>
+                <ul class="list_number">
+
+                    <li><strong>Slaughter Estate Unit</strong><br>
+                        This miscible flood pilot is in the West Texas San Andres dolomite and is an
+                        example of a gas flood with very good oil recovery. The permeability is low
+                        averaging around 4 mD at a depth of about 5000 ft. Good recovery was
+                        obtained in a waterflood in the early 1970s prior to gas flooding.<br>
+                        The gas injected contained 72 mol% CO 2 and 28 mol% H 2 S. The MMP
+                        of approximately 1000 psia with this gas and moderate API oil (32 API) is
+                        substantially less than the average reservoir pressure of 2000 psia. Thus, this
+                        flood is MCM. The acid gas was eventually replaced with a chase gas
+                        consisting of mostly nitrogen and then water. Water was injected alternately
+                        with the acid gas with a WAG ratio of about 1.0. A 25% hydrocarbon pore
+                        volume (HCPV) slug of acid gas was injected. The chase gas was also alter-
+                        nated with water, and eventually the gas water ratio was reduced to 0.7 to
+                        improve vertical sweep.<br>
+                        The cycles shown in Figure 2.1 for the chase gas correspond to the cycles
+                        in WAG injection. During WAG, water injectivity losses of about 50% were
+                        experienced owing to trapping of gas as water is injected. Furthermore, there
+                        is evidence of gas channeling as the GOR began to climb at the same time
+                        or just prior to the oil production.<br>
+                        <img src="../assets/img/casestudy/Slaughter_Estate.png" style="width:50%">
+                        <div class="title">Figure 2-1: Oil and water rates and water and gas oil ratios for Slaughter
+                            Estate Unit Pilot.</div>
+                        ncremental tertiary recovery was 19.6% OOIP, which is largely the
+                        result of good WAG management and the use of H 2 S in the gas (Stein et al.,
+                        1992). H 2 S, although very dangerous, is a very good miscible agent. When
+                        added to the primary and secondary recovery (waterflood) of about 50%, the
+                        total recovery in this pilot is expected to be around 70% OOIP, which is
+                        well above the average for most fields. Because of the great success of the
+                        pilot, the unit was gas flooded field wide. The field-wide flood has also been
+                        successful although a higher gas water ratio was used.<br>
+                        <AgGridVue fnn=72
+                            style="display: block;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
+                        </AgGridVue>
+                        <div class="title">Table 2.1: Slaughter Estate Unit Data</div>
+                    </li>
+                    <li><strong>West Sussex Unit CO2 Pilot</strong><br>
+                        Discovered in 1951, the West Sussex Shannon reservoir is
+                        located in Wyoming, USA. Full-scale waterflooding began in 1959. The cumulative
+                        recovery from primary and secondary operations was 18.1 and 24.1%, respectively.<br>
+                        Conoco conducted a CO 2 pilot in a previously waterflooded portion of the field.
+                        Covering 9.6 acres, the waterflood was a diagonal half of an inverted five-spot (one
+                        injector and three producers). Though a pilot test, the well spacing was 9.6 acres and
+                        representative of field-scale spacing. Continuous CO 2 injection started in December
+                        1982. The pre-flood oil cut was 1%; the peak oil cut was 21%. The ultimate cumulative
+                        tertiary recovery was 9.5%..<br>
+                        <AgGridVue fnn=73
+                            style="display: block;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
+                        </AgGridVue>
+                        <div class="title">Table 2.2: West Sussex Unit CO2 Pilot Data</div>
+
+                    </li>
+                </ul>
 
 
 

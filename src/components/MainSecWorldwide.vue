@@ -2,7 +2,7 @@
     <div class="YPO1AZqVOG3JVS9MFFfBm CODE" style="">
         <div class="_1yjs1_SEnbYM4ZwUEjiHjN title">
             <div class="titleContent"><span class="label"></span>
-                <h1><strong><span style="color: #ff8500;">CASE STUDY CLASSIFICATION BY PERMEABILITY</span></strong>
+                <h1><strong><span style="color: #ff8500;">EOR WORLDWIDE DISTRIBUTION</span></strong>
                 </h1>
             </div>
             <div class="traits">
@@ -20,13 +20,14 @@
         <div class="columns">
             <div class="columnContent">
 
-                <h2><span class="firm"><strong>Permeability Impact On Oil Recovery</strong></span></h2>
-                <p>We present the in chart 1 the permeability impact on Oil recovery, we can see clearly that hight recovery factor correspond to high permeability.  <br>&nbsp;</p>
+                <h2><span class="firm"><strong>EOR Worldwide Distribution</strong></span></h2>
+                <p>....  <br>&nbsp;</p>
                 <ul class="list_number">
 
-                    <AgGridPerm fnn=4
+        
+                    <AgGridWorldwide fnn=4
                         style="display: block;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
-                    </AgGridPerm>
+                    </AgGridWorldwide>
                     
 
 
@@ -36,18 +37,14 @@
 
 
                 </ul>
-                <ul class="list_number">
-                    <div id="myChart" class="ag-theme-alpine my-chart"></div>
-                    <div class="title">Chart 1 : Permeability Impact On Oil Recovery</div>
-
-                </ul>
-                <p>We present the in chart 2 the Case Studies number Classified by permeability Range. <br>&nbsp;</p>
-                <ul class="list_number">
                 
+                <ul class="list_number">
                     <div id="myChart1" class="ag-theme-alpine my-chart"></div>
-                    <div class="title">Chart 2 : Case Studies Number Classified by Permeability Range.</div>
+                    <div class="title">Chart 1 : EOR Worldwide Distribution </div>
 
                 </ul>
+                
+             
 
             </div>
 
@@ -59,11 +56,11 @@
 </template>
 
 <script>
-import AgGridPerm from '@/components/AgGridPerm.vue';
+import AgGridWorldwide from '@/components/AgGridWorldwide.vue';
 export default {
     name: 'MainSecClas',
     components: {
-        AgGridPerm,
+        AgGridWorldwide,
 
 
     },
