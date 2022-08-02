@@ -20,7 +20,7 @@ git branch -M main
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git main
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-git remote add origin https://github.com/ishakboufatah/miscible-Page.git
+git remote add origin https://github.com/ishakboufatah/ishakboufatah.gitbub.io.git
 git push -f origin main
 
 cd -

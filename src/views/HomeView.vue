@@ -13,7 +13,10 @@ export default {
   name: 'HomeView',
   components: {
     Poster,MainSecEORD,
-    
+
+  },
+  mounted() {  
+    document.title = "SH EOR DATABASE";  
   },
   
 

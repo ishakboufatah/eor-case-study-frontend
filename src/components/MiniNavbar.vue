@@ -6,7 +6,7 @@
                 <div class="logo"><a href="https://sonatrach.com/"><img src="../assets/img/header/sonatrach.png"
                             alt="Sonatrach"></a>
                 </div>
-                <div class="burger" :class="{ open: click6 }" @click="click6 = !click6">
+                <div class="burger" :class="{ open: click6  }" @click="click6 = !click6">
                     <span></span><span></span><span></span><span></span><span></span><span></span>
                 </div>
                 <div class="logo1"><a href="https://www.usthb.dz/"><img src="../assets/img/header/logousthb.png"
@@ -19,7 +19,7 @@
 
                     <li>
                         <div class="mainPage">
-                            <router-link to="/" @click="click3 = !click3" class="">HOME</router-link>
+                            <router-link to="/" @click="click3 = !click3 ,click6 = !click6" class="">HOME</router-link>
                             <router-link to="/" class="ctaArrow">→</router-link>
                         </div>
 
@@ -30,7 +30,7 @@
                     <li>
                         <div class="mainPage"><a href="#" onclick="return false;" @click="click4 = !click4"
                                 class="titel"
-                                :class="{ 'active': subIsActive(['/cas-injection-de-gaz', '/EorClasWorldwide']) }">EOR
+                                :class="{ 'active': subIsActive(['/cas-injection-de-gaz', '/EorClasWorldwide','/EorClasPerm']) }">EOR
                                 WORLDWIDE
                                 DATABASE</a>
                             <a href="#" onclick="return false;" class="ctaArrow" :class="{ 'active': false }">→</a>
@@ -41,19 +41,19 @@
                                         class="subpages " :class="{ 'active': subIsActive(['/cas-injection-de-gaz']) }">EOR Techniques</a></div>
                                 <ul class="subpages" :class="{ open: click8 }">
                                     <li>
-                                        <router-link to="/cas-injection-de-gaz" class="">Miscible EOR</router-link>
+                                        <router-link to="/cas-injection-de-gaz" class="" @click="click6 = !click6">Miscible EOR</router-link>
                                     </li>
                                     <li><a href="#" onclick="return false;" class="">Chimical EOR</a></li>
                                     <li><a href="#" onclick="return false;" class="">Microbial EOR</a></li>
                                 </ul>
                             </li>
-                            <li><router-link to="/EorClasWorldwide" class="">EOR Worldwide Distribution</router-link></li>
+                            <li><router-link to="/EorClasWorldwide" class="" @click="click6 = !click6">EOR Worldwide Distribution</router-link></li>
                            
                             <li>
                                 <div class="mainPage"><a href="#" onclick="return false;" @click="click9 = !click9"
-                                        class="subpages ">EOR Distribution By Properties</a></div>
-                                <ul class="subpages" :class="{ open: click }">
-                                    <li><router-link to="/EorClasPerm" class="">By Permeability</router-link></li>
+                                        class="subpages " :class="{ 'active': subIsActive('/EorClasPerm') }" >EOR Distribution By Properties</a></div>
+                                <ul class="subpages" :class="{ open: click9 }">
+                                    <li><router-link to="/EorClasPerm" class="" @click="click6 = !click6">By Permeability</router-link></li>
                                    
                                 </ul>
                             </li>
@@ -63,7 +63,7 @@
                     </li>
                     <li>
                         <div class="mainPage"><a href="#" onclick="return false;" @click="click5 = !click5"
-                                class="titel" :class="{ 'active': subIsActive('/EorClasPerm') }">SONATRACH DATABASE</a><a href="#" onclick="return false;" class="ctaArrow">→</a></div>
+                                class="titel" >SONATRACH DATABASE</a><a href="#" onclick="return false;" class="ctaArrow">→</a></div>
                         <ul class="pages" :class="{ open: click5 }">
                            
 

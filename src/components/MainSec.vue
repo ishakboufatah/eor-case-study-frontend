@@ -204,7 +204,7 @@
                         <div class="title">Figure 9: Brazeau River Nisku A (Nisku X2X) - Well Locations</div>
                         <img src="../assets/img/casestudy/BrazeauRiverNiskuA(akaNiskuX2X)–Production-InjectionHistory.png"
                             style="width:100%">
-                        <div class="title">Figure : Brazeau River Nisku A (Nisku X2X) - Production/Injection History
+                        <div class="title">Figure 10 : Brazeau River Nisku A (Nisku X2X) - Production/Injection History
                         </div>
                         <AgGridVue fnn=4
                             style="display: block;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
@@ -238,7 +238,18 @@
                         to the pool in 1993 and was successful in increasing the oil rate and decreasing the gas-oil
                         ratio.<br>
                         The pool location, wells and recovery performance during the miscible flood scheme are
-                        summarized in Figures 17 and 18. The EOR project assessment is shown in Table 6.<br>
+                        summarized in Figures 11 and 12. The EOR project assessment is shown in Table 6.<br>
+                         <img src="../assets/img/casestudy/BrazeauRiverNiskuD-Well-Locations.png"
+                            style="width:50%">
+                        <div class="title">Figure 11: Brazeau River Nisku D - Well Locations</div>
+                        <img src="../assets/img/casestudy/BrazeauRiverNiskuD-Production-InjectionHistory.png"
+                            style="width:100%">
+                        <div class="title">Figure 12 : Brazeau River Nisku D - Production/Injection History
+                        </div>
+                        <AgGridVue fnn=5
+                            style="display: block;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
+                        </AgGridVue>
+                        <div class="title">Table 6: Brazeau River Nisku D Data</div>
                         The estimated primary recovery factor for the pool was 50 percent. The incremental EOR
                         recovery factor with the solvent injection was 15 percent.
                         . </li>
@@ -256,7 +267,18 @@
                         years, when the gas-oil contact was estimated to be only 15 m above the top of the
                         producing perforations.<br>
                         The pool location, wells and recovery performance during the miscible flood scheme are
-                        summarized in Figures 19 and 20. The EOR project assessment is shown in Table 7.<br>
+                        summarized in Figures 13 and 14. The EOR project assessment is shown in Table 7.<br>
+                        <img src="../assets/img/casestudy/BrazeauRiverNiskuE-Well-Locations.png"
+                            style="width:50%">
+                        <div class="title">Figure 13: Brazeau River Nisku E - Well Locations</div>
+                        <img src="../assets/img/casestudy/BrazeauRiverNiskuE-Production-Injection-History.png"
+                            style="width:100%">
+                        <div class="title">Figure 14 : Brazeau River Nisku E - Production/Injection History
+                        </div>
+                        <AgGridVue fnn=6
+                            style="display: block;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
+                        </AgGridVue>
+                        <div class="title">Table 7: Brazeau River Nisku E Data</div>
                         The estimated primary recovery factor for the pool was 45.1 percent. The incremental EOR
                         recovery factor with the solvent injection was 35 percent. At the end of 2010, the
                         remaining OIP is 0.390 x 10 6 m 3 .
@@ -268,9 +290,20 @@
                         pressure is 27,614 kPa. The OOIP in the pool was 4.7 x 10 6 m 3 .<br>
                         Gas injection started in 1978, followed by water injection in 1982 and, finally, solvent
                         flooding in 1986. The EOR project assessment is shown in Table 8. The pool location, wells
-                        and recovery performance during the miscible flood scheme are summarized in Figures 21
-                        and 22.<br>
-                        The scheme resulted in improved oil recovery, as seen in Figure 22. From the start of gas
+                        and recovery performance during the miscible flood scheme are summarized in Figures 14
+                        and 15.<br>
+                        <img src="../assets/img/casestudy/CarolineCardiumE-Well-Locations.png"
+                            style="width:50%">
+                        <div class="title">Figure 14: Caroline Cardium E - Well Locations</div>
+                        <img src="../assets/img/casestudy/CarolineCardiumE-Production-Injection-History.png"
+                            style="width:100%">
+                        <div class="title">Figure 15 : Caroline Cardium E - Production/Injection History
+                        </div>
+                        <AgGridVue fnn=7
+                            style="display: block;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
+                        </AgGridVue>
+                        <div class="title">Table 8: Caroline Cardium E Data</div>
+                        The scheme resulted in improved oil recovery, as seen in Figure 15. From the start of gas
                         injection, the oil rate increased from about 200 m 3 /d in 1978 to about 500 m 3 /d by 1989.
                         This increase in production is likely partially due to additional wells coming on production
                         over that time period. Gas injection was completed in 1986, and solvent flooding was
@@ -289,8 +322,19 @@
                         early to gauge the full benefits of the CO 2 flooding scheme, but the results are positive thus
                         far.<br>
                         The EOR Project Assessment of Viking E is summarized in Table 9. The pool location, wells
-                        and recovery performance during the miscible flood scheme are summarized in Figures 23
-                        and 24.<br>
+                        and recovery performance during the miscible flood scheme are summarized in Figures 16
+                        and 17.<br>
+                        <img src="../assets/img/casestudy/ChigwellVikingE-Well-Locations.png"
+                            style="width:50%">
+                        <div class="title">Figure 16: Chigwell Viking E - Well Locations</div>
+                        <img src="../assets/img/casestudy/ChigwellVikingE-Production-InjectionHistory.png"
+                            style="width:100%">
+                        <div class="title">Figure 17 : Chigwell Viking E - Production/Injection History
+                        </div>
+                        <AgGridVue fnn=8
+                            style="display: block;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
+                        </AgGridVue>
+                        <div class="title">Table 9: Chigwell Viking E Data</div>
                         The pool pressure is much lower than the expected value for its depth of 1,385.6 m. The
                         normal pressure gradient is about 10 kPa/m. With this gradient, the initial pressure should
                         be about 13,800 kPa. Clearly the reservoir is severely under-pressured. This has important
@@ -312,7 +356,18 @@
                         CO 2 flood started in 2006, which is still in operation at the time of writing. The EOR project
                         assessment is shown in Table 10.<br>
                         The pool location, wells and recovery performance during the miscible flood scheme are
-                        summarized in Figures 25 and 26.<br>
+                        summarized in Figures 18 and 19.<br>
+                        <img src="../assets/img/casestudy/ChigwellVikingI-Well-Locations.png"
+                            style="width:50%">
+                        <div class="title">Figure 18: Chigwell Viking I - Well Locations</div>
+                        <img src="../assets/img/casestudy/ChigwellVikingI-Production-InjectionHistory.png"
+                            style="width:100%">
+                        <div class="title">Figure 19 : Chigwell Viking I - Production/Injection History
+                        </div>
+                        <AgGridVue fnn=9
+                            style="display: block;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
+                        </AgGridVue>
+                        <div class="title">Table 10: Chigwell Viking I Data</div>
                         The pool pressure is much lower than the expected value for its depth of 1,411 m. The
                         normal pressure gradient is about 10 kPa/m. With this gradient, the initial pressure should
                         be about 14,100 kPa. The reservoir is severely under-pressured, which has important
@@ -322,17 +377,38 @@
                         Pressure surveys from 1997 and 2010 indicate a reservoir pressure above the MMP during
                         the solvent injection periods. The maximum pressure reached is about 16,500 kPa.<br>
                         A bubble map showing cumulative oil recovery in the Chigwell Viking I pool is given in
-                        Figure 27.<br>
-                        The solvent-CO 2 floods resulted in improved oil recovery, as indicated in Figures 28 and 29
+                        Figure 20.<br>
+                        <img src="../assets/img/casestudy/ChigwellVikingICO2FloodCumulativeOilRecovery(m3).png"
+                            style="width:50%">
+                        <div class="title">Figure 20: Chigwell Viking I CO 2 Flood Cumulative Oil Recovery (m 3 )</div>
+                        The solvent-CO 2 floods resulted in improved oil recovery, as indicated in Figures 21 and 22
                         At the start of ethane injection, the oil rate went from about 20 m 3 /d to 140 m 3 /d. After
                         the
                         start of CO 2 injection, the oil rate went from about 20 m 3 /d to 90 m 3 /d. In both cases, the
                         peak rate was immediately followed by a sharp decline, with a similar decline rate to the
-                        earlier primary production (Figure 28).<br>
-                        The ethane and CO 2 flood pressure history measurements are plotted in Figure 30. A plot
-                        showing the daily production performance and well count can be found in Figure 31, while
-                        the 6-33 WAG injection history is given in Figure 32. Finally, the net CO 2 volumes injected
-                        into the pool are given in Figure 33.<br>
+                        earlier primary production (Figure 21).<br>
+                        <img src="../assets/img/casestudy/ChigwellVikingICO2FloodHistoricalProduction.png"
+                            style="width:50%">
+                        <div class="title">Figure 21: Chigwell Viking I CO2 Flood Historical Production</div>
+                        <img src="../assets/img/casestudy/ChigwellVikingIERSchemeHistoricalProduction.png"
+                            style="width:50%">
+                        <div class="title">Figure 22: Chigwell Viking I ER Scheme Historical Production</div>
+                        The ethane and CO 2 flood pressure history measurements are plotted in Figure 23. A plot
+                        showing the daily production performance and well count can be found in Figure 24, while
+                        the 6-33 WAG injection history is given in Figure 25. Finally, the net CO 2 volumes injected
+                        into the pool are given in Figure 26.<br>
+                        <img src="../assets/img/casestudy/EthaneandCO2FloodPressureHistory.png"
+                            style="width:50%">
+                        <div class="title">Figure 23: Ethane and CO2 Flood Pressure History</div>
+                        <img src="../assets/img/casestudy/ChigwellVikingIPoolDailyProductionPerformance.png"
+                            style="width:50%">
+                        <div class="title">Figure 24: Chigwell Viking I Pool Daily Production Performance</div>
+                        <img src="../assets/img/casestudy/ChigwellVikingIWAGInjectionHistory.png"
+                            style="width:50%">
+                        <div class="title">Figure 25: Chigwell Viking I WAG Injection History</div>
+                        <img src="../assets/img/casestudy/ChigwellVikingIPoolNetCO2VolumesInjected.png"
+                            style="width:50%">
+                        <div class="title">Figure 26: Chigwell Viking I Pool Net CO2 Volumes Injected</div>
                         The estimated primary recovery factor for the pool was 8 percent. The incremental EOR
                         recovery factor with the solvent-CO 2 injection was 8 percent. The remaining OIP is
                         1.66 x 10 6 m 3 . From the production data, the primary recovery was about 240,000 m 3 , the
@@ -373,11 +449,22 @@
                         was returned to water injection, and no sample can be taken until the pool is returned to
                         production.<br>
                         The pool location, wells and recovery performance during the miscible flood scheme are
-                        summarized in Figures 34 and 35. The EOR project assessment is shown in Table 11.<br>
+                        summarized in Figures 27 and 28. The EOR project assessment is shown in Table 11.<br>
+                        <img src="../assets/img/casestudy/EnchantArcsA&B-WellLocations.png"
+                            style="width:50%">
+                        <div class="title">Figure 27: Enchant Arcs A & B - Well Locations</div>
+                        <img src="../assets/img/casestudy/EnchantArcsA&B-ProductionInjectionHistory.png"
+                            style="width:100%">
+                        <div class="title">Figure 28 : Enchant Arcs A & B - Production/Injection History
+                        </div>
+                        <AgGridVue fnn=10
+                            style="display: block;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
+                        </AgGridVue>
+                        <div class="title">Table 11: Enchant Arcs A & B Data</div>
                         The estimated primary recovery factor for the pool was 22 percent. The incremental EOR
                         recovery factor with the solvent injection was 17 percent.
                         . </li>
-                    <li><strong>Enchant Arcs F & G (Commingled 017</strong><br>
+                    <li><strong>Enchant Arcs F & G (Commingled 017)</strong><br>
                         The Enchant Arcs F & G pool, now called the Commingled 017 pool, is a light-medium oil
                         carbonate reservoir at a depth of 1,320.6 m. The oil gravity is 28.03°API. The average
                         porosity is 0.13, the average water saturation is 0.20 and the initial reservoir pressure is
@@ -394,7 +481,18 @@
                         its purchase of Anadarko Canada Corporation, planned to convert the former injector 0017-
                         22-14-16W4W4 into a producer in the second quarter of 2007.<br>
                         The pool location, wells and recovery performance during the miscible flood scheme are
-                        summarized in Figures 36 and 37. The EOR project assessment is shown in Table 12.<br>
+                        summarized in Figures 29 and 30. The EOR project assessment is shown in Table 12.<br>
+                        <img src="../assets/img/casestudy/EnchantArcsF&G-WellLocations.png"
+                            style="width:50%">
+                        <div class="title">Figure 29: Enchant Arcs F & G - Well Locations</div>
+                        <img src="../assets/img/casestudy/EnchantArcsF&G-ProductionInjectionHistory.png"
+                            style="width:100%">
+                        <div class="title">Figure 30 : Enchant Arcs F & G - Production/Injection History
+                        </div>
+                        <AgGridVue fnn=11
+                            style="display: block;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
+                        </AgGridVue>
+                        <div class="title">Table 12: Enchant Arcs F & G Data</div>
                         The estimated primary recovery factor for the pool was 25 percent. The incremental EOR
                         recovery factor with the solvent injection was 23 percent.<br>
 
@@ -405,7 +503,17 @@
                         32.1°API. The average water saturation is 0.14 and the initial reservoir pressure is
                         11,417 kPa. The OOIP in the pool was 5.804 x 10 6 m 3 .<br>
                         The pool location, wells and recovery performance during the miscible flood scheme are
-                        summarized in Figures 38 and 39. The EOR project assessment is shown in Table 13.<br>
+                        summarized in Figures 31 and 32. The EOR project assessment is shown in Table 13.<br>
+                        <img src="../assets/img/casestudy/Fenn-BigValleyNiskuA-WellLocations.png"
+                            style="width:50%">
+                        <div class="title">Figure 31: Fenn-Big Valley Nisku A - Well Locations</div>
+                        <img src="../assets/img/casestudy/Fenn-BigValleyNiskuA-ProductionInjectionHistory.png"
+                            style="width:100%">
+                        <div class="title">Figure 32 : Fenn-Big Valley Nisku A - Production/Injection History</div>
+                        <AgGridVue fnn=12
+                            style="display: block;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
+                        </AgGridVue>
+                        <div class="title">Table 13: Fenn-Big Valley Nisku A Data</div>
                         An experimental solvent flood was conducted in the pool from 1987 to 1989 using nitrogen
                         injection.<br>
                         The estimated primary recovery factor for the pool was 46.8 percent. The incremental EOR
@@ -418,7 +526,17 @@
                         OOIP in the pool was 49.603 x 10 6 m 3 .<br>
                         Gas injection was started prior to 1962 and ended in 2001. The EOR project assessment is
                         shown in Table 14. The pool location, wells and recovery performance during the miscible
-                        flood scheme are summarized in Figures 40 and 41.<br>
+                        flood scheme are summarized in Figures 33 and 34.<br>
+                        <img src="../assets/img/casestudy/GoldenSpikeD-3A-WellLocations.png"
+                            style="width:50%">
+                        <div class="title">Figure 33: Golden Spike D-3A - Well Locations</div>
+                        <img src="../assets/img/casestudy/GoldenSpikeD-3A-ProductionInjectionHistory.png"
+                            style="width:100%">
+                        <div class="title">Figure 34 : Golden Spike D-3A - Production/Injection History</div>
+                        <AgGridVue fnn=13
+                            style="display: block;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
+                        </AgGridVue>
+                        <div class="title">Table 14: Golden Spike D-3A  Data</div>
                         The estimated primary recovery factor for the pool was 53 percent. The incremental EOR
                         recovery factor with the solvent injection was 5 percent for a combined incremental
                         recovery for the miscible flood of 58 percent.
@@ -431,8 +549,19 @@
                         pressure is 24,805 kPa. The OOIP in the pool was 16.16 x 10 6 m 3 .<br>
                         Solvent flooding in the pool commenced in 1987. The EOR project assessment is shown in
                         Table 15. The pool location, wells and recovery performance during the miscible flood
-                        scheme are summarized in Figures 42 and 43. The scheme resulted in improved oil
-                        recovery, as seen in Figure 43. From the start of solvent injection, the oil rate increased
+                        scheme are summarized in Figures 35 and 36.<br>
+                        <img src="../assets/img/casestudy/GooseRiverBeaverhillLakeA-WellLocations.png"
+                            style="width:50%">
+                        <div class="title">Figure 35: Goose River Beaverhill Lake A - Well Locations</div>
+                        <img src="../assets/img/casestudy/GooseRiverBeaverhillLakeA-ProductionInjectionHistory.png"
+                            style="width:100%">
+                        <div class="title">Figure 36 : Goose River Beaverhill Lake A - Production/Injection History</div>
+                        <AgGridVue fnn=14
+                            style="display: block;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
+                        </AgGridVue>
+                        <div class="title">Table 15: Goose River Beaverhill Lake A  Data</div>
+                        The scheme resulted in improved oil
+                        recovery, as seen in Figure 36. From the start of solvent injection, the oil rate increased
                         from about 500 m 3 /d in 1987 to about 1800 m 3 /d by 1994. This increase in production is
                         likely partially due to additional wells coming on production over that time period. The oil
                         rate began declining rapidly after 1994, and solvent injection was terminated in 2003.<br>
@@ -447,8 +576,18 @@
                         16,550 kPa. The OOIP in the pool was 1.721 x 10 6 m 3 .<br>
                         Solvent flooding was started in 1989 and was followed by gas injection in 1992. The EOR
                         project assessment is shown in Table 16. The pool location, wells and recovery performance
-                        during the miscible flood scheme are summarized in Figures 44 and 45.<br>
-                        The scheme likely improved oil recovery, as seen in Figure 45. The oil rate in 1990
+                        during the miscible flood scheme are summarized in Figures 37 and 38.<br>
+                        <img src="../assets/img/casestudy/JoffreD-3B-WellLocations.png"
+                            style="width:50%">
+                        <div class="title">Figure 37: Joffre D-3B - Well Locations</div>
+                        <img src="../assets/img/casestudy/JoffreD-3B-ProductionInjectionHistory.png"
+                            style="width:100%">
+                        <div class="title">Figure 38 : Joffre D-3B - Production/Injection History</div>
+                        <AgGridVue fnn=15
+                            style="display: block;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
+                        </AgGridVue>
+                        <div class="title">Table 16: Joffre D-3B  Data</div>
+                        The scheme likely improved oil recovery, as seen in Figure 38. The oil rate in 1990
                         (300 m 3 /d) was similar to the rate in 1994. Solvent flooding was completed in 1992, and
                         gas injection ended in 2002.<br>
                         The estimated primary recovery factor for the pool was 33 percent. The incremental EOR
