@@ -1,16 +1,16 @@
 <template>
-  <MainSecClas
-></MainSecClas>
+  <MainClasPerm
+></MainClasPerm>
   
 </template>
 
 <script>
 // @ is an alias to /src
-import MainSecClas from '@/components/MainSecClas.vue'
+import MainClasPerm from '@/components/MainClasPerm.vue'
 export default {
   name: 'EorClasPerm',
   components: {
-    MainSecClas,
+    MainClasPerm,
     
     
     

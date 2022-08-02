@@ -1613,29 +1613,6 @@
                 <div class="end"></div>
             </div>
 
-            <div class="columnContent">
-
-                <h2><span class="firm"><strong>EOR WORLDWIDE DISTRIBUTION </strong></span></h2>
-                <p>..................................&nbsp; <br>
-                    .........................:</p>
-                <ul class="list_number">
-                    <li><strong>:</strong><br>
-                        .</li>
-                    <li><strong> :</strong><br>
-                        . </li>
-                    <li><strong>:</strong><br>
-                        . </li>
-
-                </ul>
-
-
-
-
-
-
-                <div class="end"></div>
-            </div>
-
         </div>
     </div>
 </template>

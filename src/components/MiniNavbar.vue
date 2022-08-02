@@ -30,7 +30,7 @@
                     <li>
                         <div class="mainPage"><a href="#" onclick="return false;" @click="click4 = !click4"
                                 class="titel"
-                                :class="{ 'active': subIsActive(['/cas-injection-de-gaz', '/EorClasWorldwide','/EorClasPerm']) }">EOR
+                                :class="{ 'active': subIsActive(['/cas-injection-de-gaz', '/EorClasWorldwide','/EorClasPerm','/EorClasPor']) }">EOR
                                 WORLDWIDE
                                 DATABASE</a>
                             <a href="#" onclick="return false;" class="ctaArrow" :class="{ 'active': false }">→</a>
@@ -51,9 +51,10 @@
                            
                             <li>
                                 <div class="mainPage"><a href="#" onclick="return false;" @click="click9 = !click9"
-                                        class="subpages " :class="{ 'active': subIsActive('/EorClasPerm') }" >EOR Distribution By Properties</a></div>
+                                        class="subpages " :class="{ 'active': subIsActive(['/EorClasPerm','/EorClasPor']) }" >EOR Distribution By Properties</a></div>
                                 <ul class="subpages" :class="{ open: click9 }">
                                     <li><router-link to="/EorClasPerm" class="" @click="click6 = !click6">By Permeability</router-link></li>
+                                    <li><router-link to="/EorClasPor" class="" @click="click6 = !click6">By Porosity</router-link></li>
                                    
                                 </ul>
                             </li>

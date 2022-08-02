@@ -7,7 +7,7 @@
         <div class="level1">
             <ul class="categories">
                 <li><router-link to="/"  class="" >HOME</router-link></li>
-                <li><a href="#" onclick="return false;"     @mouseover="hover2 = true" @mouseleave="hover2 = false" class="" :class="{'active': subIsActive(['/cas-injection-de-gaz','/EorClasPerm','/EorClasWorldwide'])}">EOR WORLDWIDE DATABASE </a></li>
+                <li><a href="#" onclick="return false;"     @mouseover="hover2 = true" @mouseleave="hover2 = false" class="" :class="{'active': subIsActive(['/cas-injection-de-gaz','/EorClasPerm','/EorClasPor','/EorClasWorldwide'])}">EOR WORLDWIDE DATABASE </a></li>
                 <li><a href="#" onclick="return false;" >SONATRACH DATABASE</a></li>
                 <li><a href="#" onclick="return false;" @mouseover="hover1 = true" @mouseleave="hover1 = false" class="">AUTHOR</a></li>
                 
@@ -24,7 +24,7 @@
         <ul>
             <li><a href="#" onclick="return false;" class="" @mouseover="hover8 = true" @mouseleave="hover8 = false" :class="{'active': subIsActive( '/cas-injection-de-gaz')}"> EOR Techniques</a></li>
             <li><router-link to="/EorClasWorldwide"  class="">EOR Worldwide Distribution</router-link></li>
-            <li><a href="#" onclick="return false;" class=""  @mouseover="hover3 = true" @mouseleave="hover3 = false" :class="{'active': subIsActive('/EorClasPerm')}">EOR Distribution By Properties</a></li>
+            <li><a href="#" onclick="return false;" class=""  @mouseover="hover3 = true" @mouseleave="hover3 = false" :class="{'active': subIsActive(['/EorClasPerm','/EorClasPor'])}">EOR Distribution By Properties</a></li>
             
         </ul>
     </div>
@@ -43,6 +43,7 @@
     <div class="subsubnav" :class="{ active: hover3 }" @mouseover="hover3 = true" @mouseleave="hover3 = false">
         <ul>
             <li><router-link to="/EorClasPerm"   class=""> By Permeability</router-link></li>
+            <li><router-link to="/EorClasPor"   class=""> By Porosity</router-link></li>
         </ul>
     </div>
     

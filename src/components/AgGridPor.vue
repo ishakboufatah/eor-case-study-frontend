@@ -45,91 +45,77 @@ let respone1 = rowData[0]
 
 respone1.forEach(item => {
 
-  respone.push({ field: item[0].value + " " + item[1].value, Recovery_factor: item[39].value, permeability: item[21].value })
+  respone.push({ field: item[0].value + " " + item[1].value, Recovery_factor: item[39].value, porosity: item[22].value })
 })
 let rowData1 = [
-  { permrange: "[0 - 5] (md)", fields_number: 0 },
-  { permrange: "]5 - 10] (md)", fields_number: 0 },
-  { permrange: "]10 - 15] (md)", fields_number: 0 },
-  { permrange: "]15 - 20] (md)", fields_number: 0 },
-  { permrange: "]20 - 25] (md)", fields_number: 0 },
-  { permrange: "]25 - 30] (md)", fields_number: 0 },
-  { permrange: "]30 - 35] (md)", fields_number: 0 },
-  { permrange: "]35 - 40] (md)", fields_number: 0 },
-  { permrange: "]40 - 45] (md)", fields_number: 0 },
-  { permrange: "]45 - 50] (md)", fields_number: 0 },
-  { permrange: "]50 - 60] (md)", fields_number: 0 },
-  { permrange: "]60 - 70] (md)", fields_number: 0 },
-  { permrange: "]70 - 80] (md)", fields_number: 0 },
-  { permrange: "]80 - 90] (md)", fields_number: 0 },
-  { permrange: "]90 - 100] (md)", fields_number: 0 },
-  { permrange: "]100 - 200] (md)", fields_number: 0 },
-  { permrange: "]200 - 300] (md)", fields_number: 0 },
-  { permrange: "]300 - 400] (md)", fields_number: 0 },
-  { permrange: "]400 - 500] (md)", fields_number: 0 },
-  { permrange: "]500 - 600] (md)", fields_number: 0 },
-  { permrange: "]600 - 700] (md)", fields_number: 0 },
-  { permrange: "]700 - 800] (md)", fields_number: 0 },
-  { permrange: "]800 - 900] (md)", fields_number: 0 },
-  { permrange: "]900 - 1000] (md)", fields_number: 0 },
-  { permrange: "> 1000 (md)", fields_number: 0 },
+  { permrange: "[0 - 0.05]", fields_number: 0 },
+  { permrange: "]0.05 - 0.1]", fields_number: 0 },
+  { permrange: "]0.1 - 0.15]", fields_number: 0 },
+  { permrange: "]0.15 - 0.2]", fields_number: 0 },
+  { permrange: "]0.2 - 0.25]", fields_number: 0 },
+  { permrange: "]0.25 - 0.3]", fields_number: 0 },
+  { permrange: "]0.3 - 0.35]", fields_number: 0 },
+  { permrange: "]0.35 - 0.4]", fields_number: 0 },
+  { permrange: "]0.4 - 0.45]", fields_number: 0 },
+  { permrange: "]0.45 - 0.5]", fields_number: 0 },
+  { permrange: "]0.5 - 0.55]", fields_number: 0 },
+  { permrange: "]0.55 - 0.6]", fields_number: 0 },
+  { permrange: "]0.6 - 0.65]", fields_number: 0 },
+  { permrange: "]0.65 - 0.7]", fields_number: 0 },
+  { permrange: "]0.7 - 0.75]", fields_number: 0 },
+  { permrange: "]0.75 - 0.8]", fields_number: 0 },
+  { permrange: "]0.8 - 0.85]", fields_number: 0 },
+  { permrange: "]0.85 - 0.9]", fields_number: 0 },
+  { permrange: "]0.9 - 0.95]", fields_number: 0 },
+  { permrange: "]0.95 - 1]", fields_number: 0 },
+  
 
 
 
 ]
 
 respone.forEach(item => {
-  if (Number.isFinite(item.permeability) == true) {
-   if (item.permeability <= 5) {
+  if (Number.isFinite(item.porosity) == true) {
+   if (item.porosity <= 0.05) {
     rowData1[0].fields_number = rowData1[0].fields_number + 1
-  } else if ( item.permeability > 5 && item.permeability <= 10) {
+  } else if ( item.porosity > 0.05 && item.porosity <= 0.1) {
     rowData1[1].fields_number = rowData1[1].fields_number + 1
-  } else if ( item.permeability > 10 && item.permeability <= 15) {
+  } else if ( item.porosity > 0.10 && item.porosity <= 0.15) {
     rowData1[2].fields_number = rowData1[2].fields_number + 1
-  } else if ( item.permeability > 15 && item.permeability <= 20) {
+  } else if ( item.porosity > 0.15 && item.porosity <= 0.20) {
     rowData1[3].fields_number = rowData1[3].fields_number + 1
-  } else if ( item.permeability > 20 && item.permeability <= 25) {
+  } else if ( item.porosity > 0.20 && item.porosity <= 0.25) {
     rowData1[4].fields_number = rowData1[4].fields_number + 1
-  } else if ( item.permeability > 25 && item.permeability <= 30) {
+  } else if ( item.porosity > 0.25 && item.porosity <= 0.30) {
     rowData1[5].fields_number = rowData1[5].fields_number + 1
-  } else if ( item.permeability > 30 && item.permeability <= 35) {
+  } else if ( item.porosity > 0.30 && item.porosity <= 0.35) {
     rowData1[6].fields_number = rowData1[6].fields_number + 1
-  } else if ( item.permeability > 35 && item.permeability <= 40) {
+  } else if ( item.porosity > 0.35 && item.porosity <= 0.40) {
     rowData1[7].fields_number = rowData1[7].fields_number + 1
-  } else if ( item.permeability > 40 && item.permeability <= 45) {
+  } else if ( item.porosity > 0.40 && item.porosity <= 0.45) {
     rowData1[8].fields_number = rowData1[8].fields_number + 1
-  } else if ( item.permeability > 45 && item.permeability <= 50) {
+  } else if ( item.porosity > 0.45 && item.porosity <= 0.50) {
     rowData1[9].fields_number = rowData1[9].fields_number + 1
-  } else if ( item.permeability > 50 && item.permeability <= 60) {
+  } else if ( item.porosity > 0.5 && item.porosity <= 0.55) {
     rowData1[10].fields_number = rowData1[10].fields_number + 1
-  } else if ( item.permeability > 60 && item.permeability <= 70) {
+  } else if ( item.porosity > 0.55 && item.porosity <= 0.6) {
     rowData1[11].fields_number = rowData1[11].fields_number + 1
-  } else if ( item.permeability > 70 && item.permeability <= 80) {
+  } else if ( item.porosity > 0.6 && item.porosity <= 0.65) {
     rowData1[12].fields_number = rowData1[12].fields_number + 1
-  } else if ( item.permeability > 80 && item.permeability <= 90) {
+  } else if ( item.porosity > 0.65 && item.porosity <= 0.7) {
     rowData1[13].fields_number = rowData1[13].fields_number + 1
-  } else if ( item.permeability > 90 && item.permeability <= 100) {
+  } else if ( item.porosity > 0.7 && item.porosity <= 0.75) {
     rowData1[14].fields_number = rowData1[14].fields_number + 1
-  } else if ( item.permeability > 100 && item.permeability <= 200) {
+  } else if ( item.porosity > 0.75 && item.porosity <= 0.8) {
     rowData1[15].fields_number = rowData1[15].fields_number + 1
-  } else if ( item.permeability > 200 && item.permeability <= 300) {
+  } else if ( item.porosity > 0.8 && item.porosity <= 0.85) {
     rowData1[16].fields_number = rowData1[16].fields_number + 1
-  } else if ( item.permeability > 300 && item.permeability <= 400) {
+  } else if ( item.porosity > 0.85 && item.porosity <= 0.9) {
     rowData1[17].fields_number = rowData1[17].fields_number + 1
-  } else if ( item.permeability > 400 && item.permeability <= 500) {
+  } else if ( item.porosity > 0.9 && item.porosity <= 0.95) {
     rowData1[18].fields_number = rowData1[18].fields_number + 1
-  } else if ( item.permeability > 500 && item.permeability <= 600) {
+  } else if ( item.porosity > 0.95 && item.porosity <= 1) {
     rowData1[19].fields_number = rowData1[19].fields_number + 1
-  } else if ( item.permeability > 600 && item.permeability <= 700) {
-    rowData1[20].fields_number = rowData1[20].fields_number + 1
-  } else if ( item.permeability > 700 && item.permeability <= 800) {
-    rowData1[21].fields_number = rowData1[21].fields_number + 1
-  } else if ( item.permeability > 800 && item.permeability <= 900) {
-    rowData1[22].fields_number = rowData1[22].fields_number + 1
-  } else if ( item.permeability > 900 && item.permeability <= 1000) {
-    rowData1[23].fields_number = rowData1[23].fields_number + 1
-  } else if ( item.permeability > 1000) {
-    rowData1[24].fields_number = rowData1[24].fields_number + 1
   }
 }
 
@@ -138,7 +124,7 @@ respone.forEach(item => {
 })
 
 export default {
-  name: "AgGridPerm",
+  name: "AgGridPor",
   components: {
     AgGridVue
   },
@@ -166,12 +152,12 @@ export default {
       columnDefs: [
         { headerName: "field", field: "field", resizable: true, width: 220, chartDataType: 'category' },
         { headerName: "Incremental EOR Recovery Factor", field: "Recovery_factor", resizable: true, width: 300, chartDataType: 'series' },
-        { headerName: "permeability (md)", field: "permeability", resizable: true, width: 300, chartDataType: 'series' },
+        { headerName: "porosity ", field: "porosity", resizable: true, width: 300, chartDataType: 'series' },
 
 
       ],
       columnDefs1: [
-        { headerName: "permeability range (md)", field: "permrange", resizable: true, width: 220, chartDataType: 'category' },
+        { headerName: "porosity range ", field: "permrange", resizable: true, width: 220, chartDataType: 'category' },
         { headerName: "number of fields ", field: "fields_number", resizable: true, width: 300, chartDataType: 'series' },
 
 
@@ -191,7 +177,7 @@ export default {
       common: {
         title: {
           enabled: true,
-          text: 'Permeability Impact On Oil Recovery',
+          text: 'porosity Impact On Oil Recovery',
         },
         navigator: {
     enabled: true,
@@ -216,7 +202,7 @@ export default {
       common: {
         title: {
           enabled: true,
-          text: ' Case Studies Number Classified by Permeability Range',
+          text: ' Case Studies Number Classified by porosity Range',
         },
         
         legend: {
@@ -242,7 +228,7 @@ export default {
           rowStartIndex: 0,
           rowEndIndex: 75,
           chartType: 'customCombo',
-          columns: ['field',"Recovery_factor", 'permeability'],
+          columns: ['field',"Recovery_factor", 'porosity'],
         },
         seriesChartTypes: [
       
