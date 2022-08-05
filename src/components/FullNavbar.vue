@@ -7,7 +7,7 @@
         <div class="level1">
             <ul class="categories">
                 <li><router-link to="/"  class="" >HOME</router-link></li>
-                <li><a href="#" onclick="return false;"     @mouseover="hover2 = true" @mouseleave="hover2 = false" class="" :class="{'active': subIsActive(['/cas-injection-de-gaz','/EorClasPerm','/EorClasPor','/EorClasWorldwide','/EorClasRT'])}">EOR WORLDWIDE DATABASE </a></li>
+                <li><a href="#" onclick="return false;"     @mouseover="hover2 = true" @mouseleave="hover2 = false" class="" :class="{'active': subIsActive(['/MiscibleCaseStadies','/ChemicalCaseStadies','/EorClasPerm','/EorClasPor','/EorClasWorldwide','/EorClasRT'])}">EOR WORLDWIDE DATABASE </a></li>
                 <li><a href="#" onclick="return false;" >SONATRACH DATABASE</a></li>
                 <li><a href="#" onclick="return false;" @mouseover="hover1 = true" @mouseleave="hover1 = false" class="">AUTHOR</a></li>
                 
@@ -22,7 +22,7 @@
     </div>
     <div class="subnav" :class="{ active: hover2| hover8 | hover3 }" @mouseover="hover2 = true" @mouseleave="hover2 = false">
         <ul>
-            <li><a href="#" onclick="return false;" class="" @mouseover="hover8 = true" @mouseleave="hover8 = false" :class="{'active': subIsActive( '/cas-injection-de-gaz')}"> EOR Techniques</a></li>
+            <li><a href="#" onclick="return false;" class="" @mouseover="hover8 = true" @mouseleave="hover8 = false" :class="{'active': subIsActive( ['/MiscibleCaseStadies','/ChemicalCaseStadies'])}"> EOR Techniques</a></li>
             <li><router-link to="/EorClasWorldwide"  class="">EOR Worldwide Distribution</router-link></li>
             <li><a href="#" onclick="return false;" class=""  @mouseover="hover3 = true" @mouseleave="hover3 = false" :class="{'active': subIsActive(['/EorClasPerm','/EorClasPor','/EorClasRT'])}">EOR Distribution By Properties</a></li>
             
@@ -30,8 +30,8 @@
     </div>
     <div class="subsubnav " :class="{ active: hover8 }" @mouseover="hover8 = true" @mouseleave="hover8 = false">
         <ul>
-            <li><router-link to="/cas-injection-de-gaz" class="" :class="{'active': subIsActive( '/cas-injection-de-gaz')}">Miscible EOR</router-link></li>
-            <li><a href="#" onclick="return false;" class="">Chemical EOR</a></li>
+            <li><router-link to="/MiscibleCaseStadies" class="" :class="{'active': subIsActive( '/MiscibleCaseStadies')}">Miscible EOR</router-link></li>
+            <li><router-link to="/ChemicalCaseStadies"  class="">Chemical EOR</router-link></li>
             <li><a href="#" onclick="return false;" class="">Thermal EOR</a></li>
             <li><a href="#" onclick="return false;" class="">Microbial EOR</a></li>
  

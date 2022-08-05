@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import GazInjection from '../views/GazInjection.vue'
+import MiscibleCaseStadies from '../views/MiscibleCaseStadies.vue'
+import ChemicalCaseStadies from '../views/ChemicalCaseStadies.vue'
 import EorDatabase from '../views/EorDatabase.vue'
 import EorClasPerm from '../views/EorClasPerm.vue'
 import EorClasPor from '../views/EorClasPor.vue'
@@ -34,9 +35,14 @@ const routes = [
   component: EorDatabase,
 }, 
  {
-  path: '/cas-injection-de-gaz',
-  name: 'casinjectiondegaz',
-  component: GazInjection,
+  path: '/MiscibleCaseStadies',
+  name: 'MiscibleCaseStadies',
+  component: MiscibleCaseStadies,
+},
+{
+  path: '/ChemicalCaseStadies',
+  name: 'ChemicalCaseStadies',
+  component: ChemicalCaseStadies,
 },
 {
   path: '/EorClasPerm',

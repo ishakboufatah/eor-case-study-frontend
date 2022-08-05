@@ -30,7 +30,7 @@
                     <li>
                         <div class="mainPage"><a href="#" onclick="return false;" @click="click4 = !click4"
                                 class="titel"
-                                :class="{ 'active': subIsActive(['/cas-injection-de-gaz', '/EorClasWorldwide','/EorClasPerm','/EorClasPor','/EorClasRT']) }">EOR
+                                :class="{ 'active': subIsActive(['/MiscibleCaseStadies','/ChemicalCaseStadies' ,'/EorClasWorldwide','/EorClasPerm','/EorClasPor','/EorClasRT']) }">EOR
                                 WORLDWIDE
                                 DATABASE</a>
                             <a href="#" onclick="return false;" class="ctaArrow" :class="{ 'active': false }">→</a>
@@ -38,12 +38,12 @@
                         <ul class="pages" :class="{ open: click4 }">
                             <li>
                                 <div class="mainPage"><a href="#" onclick="return false;" @click="click8 = !click8"
-                                        class="subpages " :class="{ 'active': subIsActive(['/cas-injection-de-gaz']) }">EOR Techniques</a></div>
+                                        class="subpages " :class="{ 'active': subIsActive(['/MiscibleCaseStadies','/ChemicalCaseStadies']) }">EOR Techniques</a></div>
                                 <ul class="subpages" :class="{ open: click8 }">
                                     <li>
-                                        <router-link to="/cas-injection-de-gaz" class="" @click="click6 = !click6">Miscible EOR</router-link>
+                                        <router-link to="/MiscibleCaseStadies" class="" @click="click6 = !click6">Miscible EOR</router-link>
                                     </li>
-                                    <li><a href="#" onclick="return false;" class="">Chimical EOR</a></li>
+                                    <li><router-link to="/ChemicalCaseStadies"  class="" @click="click6 = !click6">Chimical EOR</router-link></li>
                                     <li><a href="#" onclick="return false;" class="">Thermal EOR</a></li>
                                     <li><a href="#" onclick="return false;" class="">Microbial EOR</a></li>
                                 </ul>

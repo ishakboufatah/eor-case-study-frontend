@@ -6,7 +6,7 @@
 // @ is an alias to /src
 import MainSec from '@/components/MainSec.vue'
 export default {
-  name: 'GazInjection',
+  name: 'MiscibleCaseStadies',
   components: {
     MainSec,
     
