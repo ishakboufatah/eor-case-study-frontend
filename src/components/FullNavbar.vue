@@ -7,7 +7,7 @@
         <div class="level1">
             <ul class="categories">
                 <li><router-link to="/"  class="" >HOME</router-link></li>
-                <li><a href="#" onclick="return false;"     @mouseover="hover2 = true" @mouseleave="hover2 = false" class="" :class="{'active': subIsActive(['/cas-injection-de-gaz','/EorClasPerm','/EorClasPor','/EorClasWorldwide'])}">EOR WORLDWIDE DATABASE </a></li>
+                <li><a href="#" onclick="return false;"     @mouseover="hover2 = true" @mouseleave="hover2 = false" class="" :class="{'active': subIsActive(['/cas-injection-de-gaz','/EorClasPerm','/EorClasPor','/EorClasWorldwide','/EorClasRT'])}">EOR WORLDWIDE DATABASE </a></li>
                 <li><a href="#" onclick="return false;" >SONATRACH DATABASE</a></li>
                 <li><a href="#" onclick="return false;" @mouseover="hover1 = true" @mouseleave="hover1 = false" class="">AUTHOR</a></li>
                 
@@ -24,7 +24,7 @@
         <ul>
             <li><a href="#" onclick="return false;" class="" @mouseover="hover8 = true" @mouseleave="hover8 = false" :class="{'active': subIsActive( '/cas-injection-de-gaz')}"> EOR Techniques</a></li>
             <li><router-link to="/EorClasWorldwide"  class="">EOR Worldwide Distribution</router-link></li>
-            <li><a href="#" onclick="return false;" class=""  @mouseover="hover3 = true" @mouseleave="hover3 = false" :class="{'active': subIsActive(['/EorClasPerm','/EorClasPor'])}">EOR Distribution By Properties</a></li>
+            <li><a href="#" onclick="return false;" class=""  @mouseover="hover3 = true" @mouseleave="hover3 = false" :class="{'active': subIsActive(['/EorClasPerm','/EorClasPor','/EorClasRT'])}">EOR Distribution By Properties</a></li>
             
         </ul>
     </div>
@@ -33,6 +33,7 @@
             <li><router-link to="/cas-injection-de-gaz" class="" :class="{'active': subIsActive( '/cas-injection-de-gaz')}">Miscible EOR</router-link></li>
             <li><a href="#" onclick="return false;" class="">Chemical EOR</a></li>
             <li><a href="#" onclick="return false;" class="">Thermal EOR</a></li>
+            <li><a href="#" onclick="return false;" class="">Microbial EOR</a></li>
  
         </ul>
     </div>
@@ -44,6 +45,9 @@
         <ul>
             <li><router-link to="/EorClasPerm"   class=""> By Permeability</router-link></li>
             <li><router-link to="/EorClasPor"   class=""> By Porosity</router-link></li>
+            <li><router-link to="/EorClasRT"   class=""> By Reservoir Temperature</router-link></li>
+            <li><a href="#" onclick="return false;"   class=""> By Salinity</a></li>
+            <li><a href="#" onclick="return false;" class=""> By Oil Viscosity</a></li>
         </ul>
     </div>
     

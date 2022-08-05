@@ -2,7 +2,7 @@
     <div class="YPO1AZqVOG3JVS9MFFfBm CODE" style="">
         <div class="_1yjs1_SEnbYM4ZwUEjiHjN title">
             <div class="titleContent"><span class="label"></span>
-                <h1><strong><span style="color: #ff8500;">CASE STUDIES DISTRIBUTION BY POROSITY</span></strong>
+                <h1><strong><span style="color: #ff8500;">CASE STUDIES DISTRIBUTION BY RESERVOIR TEMPERATURE</span></strong>
                 </h1>
             </div>
             <div class="traits">
@@ -20,13 +20,13 @@
         <div class="columns">
             <div class="columnContent">
 
-                <h2><span class="firm"><strong>Porosity Impact On Oil Recovery</strong></span></h2>
-                <p>We present the in chart 1 the porosity impact on Oil recovery  <br>&nbsp;</p>
+                <h2><span class="firm"><strong>Reservoir Temperature Impact On Oil Recovery</strong></span></h2>
+                <p>We present the in chart 1 the Reservoir Temperature impact on Oil recovery  <br>&nbsp;</p>
                 <ul class="list_number">
 
-                    <AgGridPor fnn=4
+                    <AgGridRT fnn=4
                         style="display: block;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
-                    </AgGridPor>
+                    </AgGridRT>
                     
 
 
@@ -38,14 +38,20 @@
                 </ul>
                 <ul class="list_number">
                     <div id="myChart" class="ag-theme-alpine my-chart"></div>
-                    <div class="title">Chart 1 : porosity Impact On Oil Recovery</div>
+                    <div class="title">Chart 1 : Reservoir Temperature Impact On Oil Recovery</div>
 
                 </ul>
-                <p>We present the in chart 2 the Case Studies number Classified by porosity Range. <br>&nbsp;</p>
+                <p>We present the in chart 2 the Case Studies number Classified by Reservoir Temperature Range. <br>&nbsp;</p>
+                <ul class="list_number">
+                    <div id="myChart2" class="ag-theme-alpine my-chart"></div>
+                    <div class="title">Chart 2 : Reservoir Temperature Impact On Oil Recovery</div>
+
+                </ul>
+                <p>We present the in chart 3 the Case Studies number Classified by Reservoir Temperature Range. <br>&nbsp;</p>
                 <ul class="list_number">
                 
                     <div id="myChart1" class="ag-theme-alpine my-chart"></div>
-                    <div class="title">Chart 2 : Case Studies Number Classified by porosity Range.</div>
+                    <div class="title">Chart 3 : Case Studies Number Classified by Reservoir Temperature Range.</div>
 
                 </ul>
 
@@ -59,11 +65,11 @@
 </template>
 
 <script>
-import AgGridPor from '@/components/AgGridPor.vue';
+import AgGridRT from '@/components/AgGridRT.vue';
 export default {
-    name: 'MainClasPor',
+    name: 'MainClasRT',
     components: {
-        AgGridPor,
+        AgGridRT,
 
 
     },

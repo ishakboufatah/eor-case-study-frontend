@@ -30,7 +30,7 @@
                     <li>
                         <div class="mainPage"><a href="#" onclick="return false;" @click="click4 = !click4"
                                 class="titel"
-                                :class="{ 'active': subIsActive(['/cas-injection-de-gaz', '/EorClasWorldwide','/EorClasPerm','/EorClasPor']) }">EOR
+                                :class="{ 'active': subIsActive(['/cas-injection-de-gaz', '/EorClasWorldwide','/EorClasPerm','/EorClasPor','/EorClasRT']) }">EOR
                                 WORLDWIDE
                                 DATABASE</a>
                             <a href="#" onclick="return false;" class="ctaArrow" :class="{ 'active': false }">→</a>
@@ -44,6 +44,7 @@
                                         <router-link to="/cas-injection-de-gaz" class="" @click="click6 = !click6">Miscible EOR</router-link>
                                     </li>
                                     <li><a href="#" onclick="return false;" class="">Chimical EOR</a></li>
+                                    <li><a href="#" onclick="return false;" class="">Thermal EOR</a></li>
                                     <li><a href="#" onclick="return false;" class="">Microbial EOR</a></li>
                                 </ul>
                             </li>
@@ -51,10 +52,13 @@
                            
                             <li>
                                 <div class="mainPage"><a href="#" onclick="return false;" @click="click9 = !click9"
-                                        class="subpages " :class="{ 'active': subIsActive(['/EorClasPerm','/EorClasPor']) }" >EOR Distribution By Properties</a></div>
+                                        class="subpages " :class="{ 'active': subIsActive(['/EorClasPerm','/EorClasPor','/EorClasRT']) }" >EOR Distribution By Properties</a></div>
                                 <ul class="subpages" :class="{ open: click9 }">
                                     <li><router-link to="/EorClasPerm" class="" @click="click6 = !click6">By Permeability</router-link></li>
                                     <li><router-link to="/EorClasPor" class="" @click="click6 = !click6">By Porosity</router-link></li>
+                                    <li><router-link to="/EorClasRT"   class=""  @click="click6 = !click6"> By Reservoir Temperature</router-link></li>
+                                    <li><a href="#" onclick="return false;"   class=""> By Salinity</a></li>
+                                    <li><a href="#" onclick="return false;" class=""> By Oil Viscosity</a></li>
                                    
                                 </ul>
                             </li>

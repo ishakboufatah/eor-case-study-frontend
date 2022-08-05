@@ -23,6 +23,7 @@ import "ag-grid-community/styles//ag-grid.css";
 import "ag-grid-community/styles//ag-theme-alpine.css";
 import { AgGridVue } from "ag-grid-vue3";
 import { rowData } from './data.js';
+import { rowDatachemical } from './chemicaldata.js';
 import { ModuleRegistry } from 'ag-grid-community';
 import { GridChartsModule, MenuModule, RowGroupingModule } from 'ag-grid-enterprise';
 
@@ -34,8 +35,19 @@ ModuleRegistry.registerModules([
 let respone = []
 let worldwide = []
 let respone1 = rowData[0]
+let respone2 = rowDatachemical[0]
 
 respone1.forEach(item => {
+
+   if (Number.isFinite(item[12].value) == true) {
+   
+    respone.push({ field: item[0].value + " " + item[1].value,country: item[3].value ,EOR_start_year: item[12].value,EOR_Type: item[4].value, EOR_Sub_Type: item[5].value })
+   }
+
+  
+})
+
+respone2.forEach(item => {
 
    if (Number.isFinite(item[12].value) == true) {
    

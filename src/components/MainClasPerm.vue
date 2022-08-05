@@ -2,7 +2,7 @@
     <div class="YPO1AZqVOG3JVS9MFFfBm CODE" style="">
         <div class="_1yjs1_SEnbYM4ZwUEjiHjN title">
             <div class="titleContent"><span class="label"></span>
-                <h1><strong><span style="color: #ff8500;">CASE STUDY DISTRIBUTION BY PERMEABILITY</span></strong>
+                <h1><strong><span style="color: #ff8500;">CASE STUDIES DISTRIBUTION BY PERMEABILITY</span></strong>
                 </h1>
             </div>
             <div class="traits">

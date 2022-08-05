@@ -233,7 +233,7 @@ export default {
         seriesChartTypes: [
       
       { colId: 'Recovery_factor', chartType: 'groupedColumn', secondaryAxis: true },
-      { colId: 'permeability', chartType: 'line', secondaryAxis: true }
+      { colId: 'porosity', chartType: 'line', secondaryAxis: true }
     ], 
         suppressChartRanges: true,
         chartContainer: document.querySelector('#myChart'),

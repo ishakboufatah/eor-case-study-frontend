@@ -1477,6 +1477,11 @@
                         well 16-24-116-6W6. Well 14-24-116-6W6, also completed in the Keg River X2X pool, is a
                         suspended oil well currently being used to monitor reservoir pressure in the back reef area.
                         The project area is illustrated in Map 1 in Figure 187.<br>
+                        The NCL plant generates approximately 60 x 10 3 m 3 /d of acid gas at current throughput
+levels. Daily activities are summarized graphically in Figure 188. The acid gas stream is
+averaging approximately 20 percent H 2 S and 80 percent C0 2 . Approval 7732 originally
+allowed 70,000 m 3 /d of injection. Pennzoil, at the request of NCL, has applied for and
+received approval to increase the injection to 120,000 m 3 /d.<br>
                         -<u>Scheme Performance</u><br>
                         Performance of the scheme is summarized in Figure 189.<br>
                         As of December 31, 1995, cumulative acid gas injected into the X2X pool was 9,600 m 3
@@ -1582,7 +1587,7 @@
                         well above the average for most fields. Because of the great success of the
                         pilot, the unit was gas flooded field wide. The field-wide flood has also been
                         successful although a higher gas water ratio was used.<br>
-                        <AgGridVue fnn=72
+                        <AgGridVue fnn=71
                             style="display: block;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
                         </AgGridVue>
                         <div class="title">Table 2.1: Slaughter Estate Unit Data</div>
@@ -1597,7 +1602,7 @@
                         representative of field-scale spacing. Continuous CO 2 injection started in December
                         1982. The pre-flood oil cut was 1%; the peak oil cut was 21%. The ultimate cumulative
                         tertiary recovery was 9.5%..<br>
-                        <AgGridVue fnn=73
+                        <AgGridVue fnn=72
                             style="display: block;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
                         </AgGridVue>
                         <div class="title">Table 2.2: West Sussex Unit CO2 Pilot Data</div>

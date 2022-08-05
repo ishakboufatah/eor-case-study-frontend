@@ -4,6 +4,7 @@ import GazInjection from '../views/GazInjection.vue'
 import EorDatabase from '../views/EorDatabase.vue'
 import EorClasPerm from '../views/EorClasPerm.vue'
 import EorClasPor from '../views/EorClasPor.vue'
+import EorClasRT from '../views/EorClasRT.vue'
 import EorClasWorldwide from '../views/EorClasWorldwide.vue'
 
 
@@ -46,6 +47,11 @@ const routes = [
   path: '/EorClasPor',
   name: 'EorClasPor',
   component: EorClasPor,
+},
+{
+  path: '/EorClasRT',
+  name: 'EorClasRT',
+  component: EorClasRT,
 },
 {
   path: '/EorClasWorldwide',
