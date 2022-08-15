@@ -13,6 +13,7 @@
     @first-data-rendered="onFirstDataRendered1" :chartThemeOverrides="chartThemeOverrides" :pivotMode="true" >
 
   </ag-grid-vue>
+  
 
 
 
