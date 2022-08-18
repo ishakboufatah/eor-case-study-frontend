@@ -2,7 +2,7 @@
     <div class="YPO1AZqVOG3JVS9MFFfBm CODE" style="">
         <div class="_1yjs1_SEnbYM4ZwUEjiHjN title">
             <div class="titleContent"><span class="label"></span>
-                <h1><strong><span style="color: #ff8500;">MISCIBLE EOR CASE STUDIES</span></strong>
+                <h1><strong><span style="color: #ff8500;text-transform: uppercase;">{{ $route.params.EORTechnique }} CASE STUDIES</span></strong>
                 </h1>
             </div>
             <div class="traits">
@@ -17,56 +17,19 @@
                 </div>
             </div>
         </div>
-        <div class="columns">
-            <div class="columnContent">
-
-                <h2><span class="firm"><strong>IDENTIFICATION OF EOR POTENTIAL IN CANADA</strong></span></h2>
-                <p>Sproule Associates Limited (“Sproule”) has been contracted to conduct a study titled
-                    “Identification of Enhanced Oil Recovery Potential in Alberta” at the request of the Energy
-                    Resources Conservation Board (ERCB). The study was prepared from March 2011&nbsp;:</p>
-                        
-
-                <ul class="list_number">
-                    <AgGridVueJSON 
-                        country="Canada" eortype="Miscible EOR"   style="display: block;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
-                    </AgGridVueJSON>
-                    <div class="title">Table 1: Canada Fields Data</div>
-                    
-
-                    
-                    <li v-for="CaseStudy in CaseStudies" v-bind:key="CaseStudy.CaseStudies_id" style=""><strong>{{CaseStudy.field + " " + CaseStudy.pool_name}}</strong><br>
-                        <span v-html=CaseStudy.summary ></span>
-                        
-                        
-                        . </li>
-
-
-
-
-                </ul>
-                <h2><span class="firm"><strong>EOR FIELDS CASE STADIES IN UNITED STATES</strong></span></h2>
-                <p>.........&nbsp;:</p>
-                <ul class="list_number">
-                    <AgGridVueJSON 
-                        country="Canada" eortype="Miscible EOR"   style="display: block;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
-                    </AgGridVueJSON>
-                    <div class="title">Table 1: United States Fields Data</div>
-                    <li v-for="CaseStudy in CaseStudies2" v-bind:key="CaseStudy.CaseStudies_id" style=""><strong>{{CaseStudy.field + " " + CaseStudy.pool_name}}</strong><br>
-                        <span v-html=CaseStudy.summary ></span>
-                        
-                        
-                        . </li>
-
-                   
-                </ul>
+        <div class="columns" >
+            
+            <CaseStudiesCountryBox :key= "this.$route.params.EORTechnique"></CaseStudiesCountryBox>
+            
 
 
 
 
 
 
-                <div class="end"></div>
-            </div>
+               
+            
+           
 
         </div>
     </div>
@@ -74,75 +37,56 @@
 
 <script>
 
+import CaseStudiesCountryBox from '@/components/CaseStudiesCountryBox.vue'; 
 
- import AgGridVueJSON from '@/components/AgGridVueJSON.vue' ;
-import axios from 'axios';
 export default {
     name: 'MainSec',
     components: {
-        AgGridVueJSON
-
-
-    },
+    
+    CaseStudiesCountryBox
+    
+},
 
     props: {
 
     },
+     
     data: () => ({
-        CaseStudies: [],
-        CaseStudies2: [],
-
+        
+        
+        Coun: [],
+        
         items: [
 
 
         ],
-        hover1: false,
-        hover2: false,
-        hover3: false,
-        hover4: false,
-        hover5: false,
+
     }),
+
     mounted() {
-        this.getCaseStudies()
-        this.getCaseStudies2()
-    },
-    computed:{
         
+    },
+   
+    computed:{
+       
+        console: () => console,
+        
+   
+         
   
     },
-    methods: {
-        toggleOrder(name) {
-            this.currentOrder = name;
-        },
-        orderedItems(items) {
-            return items.filter(item => {
-                if (item[this.currentOrder]) return item;
-            });     
-        },
-    
-        getCaseStudies() {
-            axios({
-                method: 'get',
-                url: 'https://sheordatabase.herokuapp.com/CaseStudies/?country=Canada&eortype=Miscible%20EOR',
-                auth: {
-                    username: 'admin',
-                    password: 'admineoradmin'
-                }
-            }).then(response => this.CaseStudies = response.data)
-        },
-        getCaseStudies2() {
-            axios({
-                method: 'get',
-                url: 'https://sheordatabase.herokuapp.com/CaseStudies/?country=United%20States&eortype=Miscible%20EOR',
-                auth: {
-                    username: 'admin',
-                    password: 'admineoradmin'
-                }
-            }).then(response => this.CaseStudies2 = response.data)
-        },
-    }
 
+    methods: {
+
+    
+       
+        
+        
+        
+    }
+    
 }
+
 </script>
     <style type="text/css">
     table,

@@ -9,7 +9,6 @@
     @column-resized="onColumnResized"
   >
   </ag-grid-vue>
-  {{Country}}
 </template>
 
 <script>
@@ -79,8 +78,8 @@ export default {
 
     
       ,
-       Country: 'Canada',
-       Eortype: 'Miscible EOR',
+      //  Country: 'Canada',
+      //  Eortype: 'Miscible EOR',
        
 
       

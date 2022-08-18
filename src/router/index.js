@@ -40,6 +40,12 @@ const routes = [
   component: MiscibleCaseStadies,
 },
 {
+  path: '/CaseStadies/:EORTechnique',
+  name: 'CaseStadies',
+  component: MiscibleCaseStadies,
+  // component: () => import(/* webpackChunkName: "about" */ '../views/MiscibleCaseStadies.vue')
+},
+{
   path: '/ChemicalCaseStadies',
   name: 'ChemicalCaseStadies',
   component: ChemicalCaseStadies,
