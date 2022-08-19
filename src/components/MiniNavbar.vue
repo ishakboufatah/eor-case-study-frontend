@@ -27,54 +27,35 @@
 
 
                     </li>
+                    
                     <li>
-                        <div class="mainPage"><a href="#" onclick="return false;" @click="click4 = !click4"
-                                class="titel"
-                                :class="{ 'active': subIsActive(['/MiscibleCaseStadies','/ChemicalCaseStadies' ,'/EorClasWorldwide','/EorClasPerm','/EorClasPor','/EorClasRT']) }">EOR
-                                WORLDWIDE
-                                DATABASE</a>
-                            <a href="#" onclick="return false;" class="ctaArrow" :class="{ 'active': false }">→</a>
-                        </div>
-                        <ul class="pages" :class="{ open: click4 }">
-                            <li>
-                                <div class="mainPage"><a href="#" onclick="return false;" @click="click8 = !click8"
-                                        class="subpages " :class="{ 'active': subIsActive(['/MiscibleCaseStadies','/ChemicalCaseStadies']) }">EOR Techniques</a></div>
-                                <ul class="subpages" :class="{ open: click8 }">
-                                    <li>
-                                        <router-link to="/MiscibleCaseStadies" class="" @click="click6 = !click6">Miscible EOR</router-link>
-                                    </li>
-                                    <li><router-link to="/ChemicalCaseStadies"  class="" @click="click6 = !click6">Chimical EOR</router-link></li>
-                                    <li><a href="#" onclick="return false;" class="">Thermal EOR</a></li>
-                                    <li><a href="#" onclick="return false;" class="">Microbial EOR</a></li>
-                                </ul>
-                            </li>
-                            <li><router-link to="/EorClasWorldwide" class="" @click="click6 = !click6">EOR Worldwide Distribution</router-link></li>
-                           
-                            <li>
-                                <div class="mainPage"><a href="#" onclick="return false;" @click="click9 = !click9"
-                                        class="subpages " :class="{ 'active': subIsActive(['/EorClasPerm','/EorClasPor','/EorClasRT']) }" >EOR Distribution By Properties</a></div>
-                                <ul class="subpages" :class="{ open: click9 }">
-                                    <li><router-link to="/EorClasPerm" class="" @click="click6 = !click6">By Permeability</router-link></li>
-                                    <li><router-link to="/EorClasPor" class="" @click="click6 = !click6">By Porosity</router-link></li>
-                                    <li><router-link to="/EorClasRT"   class=""  @click="click6 = !click6"> By Reservoir Temperature</router-link></li>
-                                    <li><a href="#" onclick="return false;"   class=""> By Salinity</a></li>
-                                    <li><a href="#" onclick="return false;" class=""> By Oil Viscosity</a></li>
-                                   
-                                </ul>
-                            </li>
-
-
+                        <div class="mainPage"><a href="#" onclick="return false;" @click="click8 = !click8"
+                                class="titel" :class="{ 'active': subIsActive([,'/CaseStadies/']) }">EOR Techniques</a></div>
+                        <ul class="pages" :class="{ open: click8 }">
+                            <li v-for="EORTechnique in EORTechniques" :key="EORTechnique.eor_techniques_id"><router-link :to="{ name: 'CaseStadies', params: {EORTechnique:EORTechnique.eor_type}}"
+              class="" @click="click6 = !click6"> {{EORTechnique.eor_type}} </router-link></li>
                         </ul>
                     </li>
+                    <li><div class="mainPage"><router-link to="/EorClasWorldwide" class="titel" @click="click6 = !click6">EOR Worldwide Distribution</router-link>
+
+                    </div></li>
+                
                     <li>
-                        <div class="mainPage"><a href="#" onclick="return false;" @click="click5 = !click5"
-                                class="titel" >SONATRACH DATABASE</a><a href="#" onclick="return false;" class="ctaArrow">→</a></div>
-                        <ul class="pages" :class="{ open: click5 }">
-                           
-
-
+                        <div class="mainPage"><a href="#" onclick="return false;" @click="click9 = !click9"
+                                class="titel" :class="{ 'active': subIsActive(['/EorClasPerm','/EorClasPor','/EorClasRT']) }" >EOR Distribution By Properties</a></div>
+                        <ul class="pages" :class="{ open: click9 }">
+                            <li><router-link to="/EorClasPerm" class="" @click="click6 = !click6">By Permeability</router-link></li>
+                            <li><router-link to="/EorClasPor" class="" @click="click6 = !click6">By Porosity</router-link></li>
+                            <li><router-link to="/EorClasRT"   class=""  @click="click6 = !click6"> By Reservoir Temperature</router-link></li>
+                            <li><a href="#" onclick="return false;"   class=""> By Salinity</a></li>
+                            <li><a href="#" onclick="return false;" class=""> By Oil Viscosity</a></li>
+                        
                         </ul>
                     </li>
+
+
+                     
+                    
                     <li>
                         <div class="mainPage"><a href="#" onclick="return false;" @click="click1 = !click1"
                                 class="titel">AUTHOR</a><a href="#" onclick="return false;" class="ctaArrow">→</a></div>
@@ -105,6 +86,7 @@
     </header>
 </template>
 <script>
+import axios from 'axios';
 export default {
     name: 'MiniNavbar',
     props: {
@@ -115,6 +97,7 @@ export default {
 
 
         ],
+        EORTechniques: [],
         click1: '',
         click2: '',
         click3: '',
@@ -126,13 +109,26 @@ export default {
         click9: '',
         click10: '',
     }),
+    mounted() {
+        this.getEORTechniques()
+    },
     methods: {
         subIsActive(input) {
             const paths = Array.isArray(input) ? input : [input]
             return paths.some(path => {
                 return this.$route.path.indexOf(path) === 0 // current path starts with this path string
             })
-        }
+        },
+        getEORTechniques() {
+            axios({
+                method: 'get',
+                url: 'https://sheordatabase.herokuapp.com/EORTechniques/',
+                auth: {
+                    username: 'admin',
+                    password: 'admineoradmin'
+                }
+            }).then(response => this.EORTechniques = response.data)
+        },
     }
 }
 </script>
