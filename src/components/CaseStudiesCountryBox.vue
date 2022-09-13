@@ -86,7 +86,10 @@ export default {
                     password: 'admineoradmin'
                 }
             }).then(response => this.CaseStudies = [... new Set(response.data.map(x => x.country))])
+         console.log('CaseStudies')
+         console.log(this.CaseStudies)
         },
+       
         
         
         

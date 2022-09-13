@@ -24,9 +24,9 @@
                 <p>We present the in chart 1 the permeability impact on Oil recovery, we can see clearly that hight recovery factor correspond to high permeability.  <br>&nbsp;</p>
                 <ul class="list_number">
 
-                    <AgGridPerm fnn=4
+                    <AgGridPermJSON 
                         style="display: block;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
-                    </AgGridPerm>
+                    </AgGridPermJSON>
                     
 
 
@@ -59,11 +59,11 @@
 </template>
 
 <script>
-import AgGridPerm from '@/components/AgGridPerm.vue';
+import AgGridPermJSON from '@/components/AgGridPermJSON.vue';
 export default {
     name: 'MainClasPerm',
     components: {
-        AgGridPerm,
+        AgGridPermJSON,
 
 
     },

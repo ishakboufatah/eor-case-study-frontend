@@ -3,7 +3,8 @@ const columnDefs= [
     { headerName: "Value", field: "value" , resizable: true , width: 300},
     
   ],
-  rowDatachemical= [[[{ proprty: "Field", value: "Brintnell Field Horsetail"},
+  rowDatachemical= [[[
+    { proprty: "Field", value: "Brintnell Field Horsetail"},
     { proprty: "Pool Name", value: "Upper Wabiskaw Sand"},
     { proprty: "Formation", value: "Wabiskaw-McMurray Deposit"},
     { proprty: "country", value: "Canada"},
