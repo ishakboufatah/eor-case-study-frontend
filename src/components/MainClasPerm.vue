@@ -20,13 +20,18 @@
         <div class="columns">
             <div class="columnContent">
 
-                <h2><span class="firm"><strong>Permeability Impact On Oil Recovery</strong></span></h2>
-                <p>We present the in chart 1 the permeability impact on Oil recovery, we can see clearly that hight recovery factor correspond to high permeability.  <br>&nbsp;</p>
+                <h2><span class="firm"><strong>Permeability Range Distribution</strong></span></h2>
+                <p>We present the in chart 1 the number of Case Studies Classified by permeability Range.  <br>&nbsp;</p>
                 <ul class="list_number">
 
                     <AgGridPermJSON 
-                        style="display: block;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
+                        style="display: none;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
                     </AgGridPermJSON>
+                    <div id="aggrid" v-for="eortyp in eortypess" v-bind:key="eortyp">
+                    <AgGridPermJSON2 
+                    :eortype="eortyp" style="display: none;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
+                    </AgGridPermJSON2>
+                    </div>
                     
 
 
@@ -37,15 +42,16 @@
 
                 </ul>
                 <ul class="list_number">
-                    <div id="myChart" class="ag-theme-alpine my-chart"></div>
-                    <div class="title">Chart 1 : Permeability Impact On Oil Recovery</div>
+                    <div id="myChart1" class="ag-theme-alpine my-chart"></div>
+                    <div class="title">Chart 1 : Case Studies Number Classified by Permeability Range.</div>
 
                 </ul>
-                <p>We present the in chart 2 the Case Studies number Classified by permeability Range. <br>&nbsp;</p>
+                <h2><span class="firm"><strong>Permeability Impact On Oil Recovery</strong></span></h2>
+                <p>We present the in this charts the permeability impact on Oil recovery, we can see clearly that hight recovery factor correspond to high permeability. <br>&nbsp;</p>
                 <ul class="list_number">
                 
-                    <div id="myChart1" class="ag-theme-alpine my-chart"></div>
-                    <div class="title">Chart 2 : Case Studies Number Classified by Permeability Range.</div>
+                    <div id="myChart" class="ag-theme-alpine my-chart"></div>
+                    <div class="title">Chart 2 : Permeability Impact On Oil Recovery.</div>
 
                 </ul>
 
@@ -59,11 +65,14 @@
 </template>
 
 <script>
+import axios from 'axios';
 import AgGridPermJSON from '@/components/AgGridPermJSON.vue';
+import AgGridPermJSON2 from '@/components/AgGridPermJSON2.vue';
 export default {
     name: 'MainClasPerm',
     components: {
         AgGridPermJSON,
+        AgGridPermJSON2
 
 
     },
@@ -75,17 +84,41 @@ export default {
 
 
         ],
+        eortype:'Miscible EOR',
         hover1: false,
         hover2: false,
         hover3: false,
         hover4: false,
         hover5: false,
+        eortypess:[],
 
     }),
     mounted() {
 
+        this.eortechnique()
+
+    },
+    methods:{
+        eortechnique() {
+     
+      
+      axios({
+        method: 'get',
+        url: 'https://sheordatabase.herokuapp.com/EORTechniques/',
 
 
+        auth: {
+          username: 'admin',
+          password: 'admineoradmin'
+        },
+
+      }).then(response => {
+        response.data.forEach((item) => { this.eortypess.push(item.eor_type) });
+
+
+
+      })
+    },
     }
 }
 

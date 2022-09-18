@@ -295,10 +295,10 @@ export default {
   height: auto !important;
 }
 
-.my-chart {
+/* .my-chart {
   height: 500px;
 
-}
+} */
 
 .ag-theme-alpine {
   /* pink category range */
