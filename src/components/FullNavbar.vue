@@ -9,7 +9,7 @@
                 <li><router-link to="/"  class="" >HOME</router-link></li>
                 <li><a href="#" onclick="return false;" class="" @mouseover="hover8 = true" @mouseleave="hover8 = false" :class="{'active': subIsActive( ['/MiscibleCaseStadies','/ChemicalCaseStadies','/CaseStadies/'])}"> EOR Techniques</a></li>
             <li><router-link to="/EorClasWorldwide"  class="">EOR Worldwide Distribution</router-link></li>
-            <li><a href="#" onclick="return false;" class=""  @mouseover="hover3 = true" @mouseleave="hover3 = false" :class="{'active': subIsActive(['/EorClasPerm','/EorClasPor','/EorClasRT'])}">EOR Distribution By Properties</a></li>
+            <li><a href="#" onclick="return false;" class=""  @mouseover="hover3 = true" @mouseleave="hover3 = false" :class="{'active': subIsActive(['/EorClasPerm','/EorClasPor','/EorClasRT','/EorClasSal','/EorClasVisc'])}">EOR Distribution By Properties</a></li>
                 <li><a href="#" onclick="return false;" @mouseover="hover1 = true" @mouseleave="hover1 = false" class="">AUTHOR</a></li>
                 
             </ul>
@@ -42,8 +42,8 @@
             <li><router-link to="/EorClasPerm"   class=""> By Permeability</router-link></li>
             <li><router-link to="/EorClasPor"   class=""> By Porosity</router-link></li>
             <li><router-link to="/EorClasRT"   class=""> By Reservoir Temperature</router-link></li>
-            <li><a href="#" onclick="return false;"   class=""> By Salinity</a></li>
-            <li><a href="#" onclick="return false;" class=""> By Oil Viscosity</a></li>
+            <li><router-link to="/EorClasSal"   class=""> By Salinity</router-link></li>
+            <li><router-link to="/EorClasVisc"   class=""> By Oil Viscosity</router-link></li>
         </ul>
     </div>
     

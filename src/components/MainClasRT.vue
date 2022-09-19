@@ -21,12 +21,12 @@
             <div class="columnContent">
 
                 <h2><span class="firm"><strong>Reservoir Temperature Impact On Oil Recovery</strong></span></h2>
-                <p>We present the in chart 1 the Reservoir Temperature impact on Oil recovery  <br>&nbsp;</p>
+                <p>We present the in chart 3 the Case Studies number Classified by Reservoir Temperature Range. <br>&nbsp;</p>
                 <ul class="list_number">
 
-                    <AgGridRT fnn=4
-                        style="display: block;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
-                    </AgGridRT>
+                    <AgGridRTJSON fnn=4
+                        style="display: none;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
+                    </AgGridRTJSON>
                     
 
 
@@ -37,21 +37,21 @@
 
                 </ul>
                 <ul class="list_number">
-                    <div id="myChart" class="ag-theme-alpine my-chart"></div>
+                    <div id="myChart1" class="ag-theme-alpine my-chart"></div>
                     <div class="title">Chart 1 : Reservoir Temperature Impact On Oil Recovery</div>
 
                 </ul>
-                <p>We present the in chart 2 the Case Studies number Classified by Reservoir Temperature Range. <br>&nbsp;</p>
-                <ul class="list_number">
-                    <div id="myChart2" class="ag-theme-alpine my-chart"></div>
-                    <div class="title">Chart 2 : Reservoir Temperature Impact On Oil Recovery</div>
-
-                </ul>
-                <p>We present the in chart 3 the Case Studies number Classified by Reservoir Temperature Range. <br>&nbsp;</p>
+                <h2><span class="firm"><strong>Reservoir Temperature Impact On Oil Recovery</strong></span></h2>
+                <p>We present the in chart 1 the Reservoir Temperature impact on Oil recovery  <br>&nbsp;</p>
                 <ul class="list_number">
                 
-                    <div id="myChart1" class="ag-theme-alpine my-chart"></div>
-                    <div class="title">Chart 3 : Case Studies Number Classified by Reservoir Temperature Range.</div>
+                    <div id="aggrid" v-for="(eortyp,ind) in eortypess" v-bind:key="ind">
+                    <AgGridRTJSON2 
+                    :eortype="eortyp" style="display: none;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
+                    </AgGridRTJSON2><br><br>
+                    <div :id=eortypp(eortyp) class="ag-theme-alpine my-chart"></div>
+                    <div class="title">Chart {{ind+1}} : Reservoir Temperature Impact On Oil Recovery ({{eortyp}}).</div>
+                    </div>
 
                 </ul>
 
@@ -65,11 +65,14 @@
 </template>
 
 <script>
-import AgGridRT from '@/components/AgGridRT.vue';
+import axios from 'axios';
+import AgGridRTJSON from '@/components/AgGridRTJSON.vue';
+import AgGridRTJSON2 from '@/components/AgGridRTJSON2.vue';
 export default {
     name: 'MainClasRT',
     components: {
-        AgGridRT,
+        AgGridRTJSON,
+        AgGridRTJSON2,
 
 
     },
@@ -86,12 +89,38 @@ export default {
         hover3: false,
         hover4: false,
         hover5: false,
-
+        eortypess:[],
     }),
     mounted() {
+        this.eortechnique()
+
+
+    },
+    methods:{
+        eortypp(varia){
+            return varia.replaceAll(' ', '_')
+        },
+        
+        eortechnique() {
+     
+      
+      axios({
+        method: 'get',
+        url: 'https://sheordatabase.herokuapp.com/EORTechniques/',
+
+
+        auth: {
+          username: 'admin',
+          password: 'admineoradmin'
+        },
+
+      }).then(response => {
+        response.data.forEach((item) => { this.eortypess.push(item.eor_type) });
 
 
 
+      })
+    },
     }
 }
 

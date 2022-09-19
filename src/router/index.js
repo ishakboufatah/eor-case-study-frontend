@@ -6,6 +6,8 @@ import EorDatabase from '../views/EorDatabase.vue'
 import EorClasPerm from '../views/EorClasPerm.vue'
 import EorClasPor from '../views/EorClasPor.vue'
 import EorClasRT from '../views/EorClasRT.vue'
+import EorClasSal from '../views/EorClasSal.vue'
+import EorClasVisc from '../views/EorClasVisc.vue'
 import EorClasWorldwide from '../views/EorClasWorldwide.vue'
 
 
@@ -64,6 +66,16 @@ const routes = [
   path: '/EorClasRT',
   name: 'EorClasRT',
   component: EorClasRT,
+},
+{
+  path: '/EorClasSal',
+  name: 'EorClasSal',
+  component: EorClasSal,
+},
+{
+  path: '/EorClasVisc',
+  name: 'EorClasVisc',
+  component: EorClasVisc,
 },
 {
   path: '/EorClasWorldwide',

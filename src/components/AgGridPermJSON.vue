@@ -1,7 +1,7 @@
 <template>
 
 <ag-grid-vue style="width: auto ; height: 400px;display: none;" class="ag-theme-alpine" :columnDefs="columnDefs1"
-    :rowData="rowData1" :enableCharts=true :enableRangeSelection=true :popupParent="popupParent"
+    :rowData="rowDataPerm" :enableCharts=true :enableRangeSelection=true :popupParent="popupParent"
     :defaultColDef="defaultColDef" @grid-ready="onGridReady" :createChartContainer="createChartContainer"
     @column-resized="onColumnResized" @first-data-rendered="onFirstDataRendered1"
     :chartThemeOverrides="chartThemeOverrides1">
@@ -81,32 +81,32 @@ export default {
 
 
       ],
-      rowData1: [
-        { permrange: "[0 - 5] (md)" },
-        { permrange: "]5 - 10] (md)" },
-        { permrange: "]10 - 15] (md)" },
-        { permrange: "]15 - 20] (md)" },
-        { permrange: "]20 - 25] (md)" },
-        { permrange: "]25 - 30] (md)" },
-        { permrange: "]30 - 35] (md)" },
-        { permrange: "]35 - 40] (md)" },
-        { permrange: "]40 - 45] (md)" },
-        { permrange: "]45 - 50] (md)" },
-        { permrange: "]50 - 60] (md)" },
-        { permrange: "]60 - 70] (md)" },
-        { permrange: "]70 - 80] (md)" },
-        { permrange: "]80 - 90] (md)" },
-        { permrange: "]90 - 100] (md)" },
-        { permrange: "]100 - 200] (md)" },
-        { permrange: "]200 - 300] (md)" },
-        { permrange: "]300 - 400] (md)" },
-        { permrange: "]400 - 500] (md)" },
+      rowDataPerm: [
+        { permrange: "[0 - 50] (md)" },
+        { permrange: "]50 - 100] (md)" },
+        { permrange: "]100 - 150] (md)" },
+        { permrange: "]150 - 200] (md)" },
+        { permrange: "]200 - 250] (md)" },
+        { permrange: "]250 - 300] (md)" },
+        { permrange: "]300 - 350] (md)" },
+        { permrange: "]350 - 400] (md)" },
+        { permrange: "]400 - 450] (md)" },
+        { permrange: "]450 - 500] (md)" },
         { permrange: "]500 - 600] (md)" },
         { permrange: "]600 - 700] (md)" },
         { permrange: "]700 - 800] (md)" },
         { permrange: "]800 - 900] (md)" },
         { permrange: "]900 - 1000] (md)" },
-        { permrange: "> 1000 (md)" },
+        { permrange: "]1000 - 2000] (md)" },
+        { permrange: "]2000 - 3000] (md)" },
+        { permrange: "]3000 - 4000] (md)" },
+        { permrange: "]4000 - 5000] (md)" },
+        { permrange: "]5000 - 6000] (md)" },
+        { permrange: "]6000 - 7000] (md)" },
+        { permrange: "]7000 - 8000] (md)" },
+        { permrange: "]8000 - 9000] (md)" },
+        { permrange: "]9000 - 10000] (md)" },
+        { permrange: "> 10000 (md)" },
       ],
 
       function() {
@@ -220,107 +220,107 @@ export default {
           const variaa = varia[i].replaceAll(' ', '_');
           rowDataa.forEach((item) => {
             if ((Number.isFinite(item.permeability) == true) && (item.eor_type == varia[i])) {
-              if (item.permeability <= 5) {
-                if (Number.isFinite(this.rowData1[0][variaa]) == true) {
-                  this.rowData1[0][variaa] += 1
-                } else { this.rowData1[0][variaa] = 0; this.rowData1[0][variaa] += 1 }
+              if (item.permeability <= 50) {
+                if (Number.isFinite(this.rowDataPerm[0][variaa]) == true) {
+                  this.rowDataPerm[0][variaa] += 1
+                } else { this.rowDataPerm[0][variaa] = 0; this.rowDataPerm[0][variaa] += 1 }
 
-              } else if (item.permeability > 5 && item.permeability <= 10) {
-                if (Number.isFinite(this.rowData1[1][variaa]) == true) {
-                  this.rowData1[1][variaa] += 1
-                } else { this.rowData1[1][variaa] = 0; this.rowData1[1][variaa] += 1 }
-              } else if (item.permeability > 10 && item.permeability <= 15) {
-                if (Number.isFinite(this.rowData1[2][variaa]) == true) {
-                  this.rowData1[2][variaa] += 1
-                } else { this.rowData1[2][variaa] = 0; this.rowData1[2][variaa] += 1 }
-              } else if (item.permeability > 15 && item.permeability <= 20) {
-                if (Number.isFinite(this.rowData1[3][variaa]) == true) {
-                  this.rowData1[3][variaa] += 1
-                } else { this.rowData1[3][variaa] = 0; this.rowData1[3][variaa] += 1 }
-              } else if (item.permeability > 20 && item.permeability <= 25) {
-                if (Number.isFinite(this.rowData1[4][variaa]) == true) {
-                  this.rowData1[4][variaa] += 1
-                } else { this.rowData1[4][variaa] = 0; this.rowData1[4][variaa] += 1 }
-              } else if (item.permeability > 25 && item.permeability <= 30) {
-                if (Number.isFinite(this.rowData1[5][variaa]) == true) {
-                  this.rowData1[5][variaa] += 1
-                } else { this.rowData1[5][variaa] = 0; this.rowData1[5][variaa] += 1 }
-              } else if (item.permeability > 30 && item.permeability <= 35) {
-                if (Number.isFinite(this.rowData1[6][variaa]) == true) {
-                  this.rowData1[6][variaa] += 1
-                } else { this.rowData1[6][variaa] = 0; this.rowData1[6][variaa] += 1 }
-              } else if (item.permeability > 35 && item.permeability <= 40) {
-                if (Number.isFinite(this.rowData1[7][variaa]) == true) {
-                  this.rowData1[7][variaa] += 1
-                } else { this.rowData1[7][variaa] = 0; this.rowData1[7][variaa] += 1 }
-              } else if (item.permeability > 40 && item.permeability <= 45) {
-                if (Number.isFinite(this.rowData1[8][variaa]) == true) {
-                  this.rowData1[8][variaa] += 1
-                } else { this.rowData1[8][variaa] = 0; this.rowData1[8][variaa] += 1 }
-              } else if (item.permeability > 45 && item.permeability <= 50) {
-                if (Number.isFinite(this.rowData1[9][variaa]) == true) {
-                  this.rowData1[9][variaa] += 1
-                } else { this.rowData1[9][variaa] = 0; this.rowData1[9][variaa] += 1 }
-              } else if (item.permeability > 50 && item.permeability <= 60) {
-                if (Number.isFinite(this.rowData1[10][variaa]) == true) {
-                  this.rowData1[10][variaa] += 1
-                } else { this.rowData1[10][variaa] = 0; this.rowData1[10][variaa] += 1 }
-              } else if (item.permeability > 60 && item.permeability <= 70) {
-                if (Number.isFinite(this.rowData1[11][variaa]) == true) {
-                  this.rowData1[11][variaa] += 1
-                } else { this.rowData1[11][variaa] = 0; this.rowData1[11][variaa] += 1 }
-              } else if (item.permeability > 70 && item.permeability <= 80) {
-                if (Number.isFinite(this.rowData1[12][variaa]) == true) {
-                  this.rowData1[12][variaa] += 1
-                } else { this.rowData1[12][variaa] = 0; this.rowData1[12][variaa] += 1 }
-              } else if (item.permeability > 80 && item.permeability <= 90) {
-                if (Number.isFinite(this.rowData1[13][variaa]) == true) {
-                  this.rowData1[13][variaa] += 1
-                } else { this.rowData1[13][variaa] = 0; this.rowData1[13][variaa] += 1 }
-              } else if (item.permeability > 90 && item.permeability <= 100) {
-                if (Number.isFinite(this.rowData1[14][variaa]) == true) {
-                  this.rowData1[14][variaa] += 1
-                } else { this.rowData1[14][variaa] = 0; this.rowData1[14][variaa] += 1 }
-              } else if (item.permeability > 100 && item.permeability <= 200) {
-                if (Number.isFinite(this.rowData1[15][variaa]) == true) {
-                  this.rowData1[15][variaa] += 1
-                } else { this.rowData1[15][variaa] = 0; this.rowData1[15][variaa] += 1 }
-              } else if (item.permeability > 200 && item.permeability <= 300) {
-                if (Number.isFinite(this.rowData1[16][variaa]) == true) {
-                  this.rowData1[16][variaa] += 1
-                } else { this.rowData1[16][variaa] = 0; this.rowData1[16][variaa] += 1 }
-              } else if (item.permeability > 300 && item.permeability <= 400) {
-                if (Number.isFinite(this.rowData1[17][variaa]) == true) {
-                  this.rowData1[17][variaa] += 1
-                } else { this.rowData1[17][variaa] = 0; this.rowData1[17][variaa] += 1 }
-              } else if (item.permeability > 400 && item.permeability <= 500) {
-                if (Number.isFinite(this.rowData1[18][variaa]) == true) {
-                  this.rowData1[18][variaa] += 1
-                } else { this.rowData1[18][variaa] = 0; this.rowData1[18][variaa] += 1 }
+              } else if (item.permeability > 50 && item.permeability <= 100) {
+                if (Number.isFinite(this.rowDataPerm[1][variaa]) == true) {
+                  this.rowDataPerm[1][variaa] += 1
+                } else { this.rowDataPerm[1][variaa] = 0; this.rowDataPerm[1][variaa] += 1 }
+              } else if (item.permeability > 100 && item.permeability <= 150) {
+                if (Number.isFinite(this.rowDataPerm[2][variaa]) == true) {
+                  this.rowDataPerm[2][variaa] += 1
+                } else { this.rowDataPerm[2][variaa] = 0; this.rowDataPerm[2][variaa] += 1 }
+              } else if (item.permeability > 150 && item.permeability <= 200) {
+                if (Number.isFinite(this.rowDataPerm[3][variaa]) == true) {
+                  this.rowDataPerm[3][variaa] += 1
+                } else { this.rowDataPerm[3][variaa] = 0; this.rowDataPerm[3][variaa] += 1 }
+              } else if (item.permeability > 200 && item.permeability <= 250) {
+                if (Number.isFinite(this.rowDataPerm[4][variaa]) == true) {
+                  this.rowDataPerm[4][variaa] += 1
+                } else { this.rowDataPerm[4][variaa] = 0; this.rowDataPerm[4][variaa] += 1 }
+              } else if (item.permeability > 250 && item.permeability <= 300) {
+                if (Number.isFinite(this.rowDataPerm[5][variaa]) == true) {
+                  this.rowDataPerm[5][variaa] += 1
+                } else { this.rowDataPerm[5][variaa] = 0; this.rowDataPerm[5][variaa] += 1 }
+              } else if (item.permeability > 300 && item.permeability <= 350) {
+                if (Number.isFinite(this.rowDataPerm[6][variaa]) == true) {
+                  this.rowDataPerm[6][variaa] += 1
+                } else { this.rowDataPerm[6][variaa] = 0; this.rowDataPerm[6][variaa] += 1 }
+              } else if (item.permeability > 350 && item.permeability <= 400) {
+                if (Number.isFinite(this.rowDataPerm[7][variaa]) == true) {
+                  this.rowDataPerm[7][variaa] += 1
+                } else { this.rowDataPerm[7][variaa] = 0; this.rowDataPerm[7][variaa] += 1 }
+              } else if (item.permeability > 400 && item.permeability <= 450) {
+                if (Number.isFinite(this.rowDataPerm[8][variaa]) == true) {
+                  this.rowDataPerm[8][variaa] += 1
+                } else { this.rowDataPerm[8][variaa] = 0; this.rowDataPerm[8][variaa] += 1 }
+              } else if (item.permeability > 450 && item.permeability <= 500) {
+                if (Number.isFinite(this.rowDataPerm[9][variaa]) == true) {
+                  this.rowDataPerm[9][variaa] += 1
+                } else { this.rowDataPerm[9][variaa] = 0; this.rowDataPerm[9][variaa] += 1 }
               } else if (item.permeability > 500 && item.permeability <= 600) {
-                if (Number.isFinite(this.rowData1[19][variaa]) == true) {
-                  this.rowData1[19][variaa] += 1
-                } else { this.rowData1[19][variaa] = 0; this.rowData1[19][variaa] += 1 }
+                if (Number.isFinite(this.rowDataPerm[10][variaa]) == true) {
+                  this.rowDataPerm[10][variaa] += 1
+                } else { this.rowDataPerm[10][variaa] = 0; this.rowDataPerm[10][variaa] += 1 }
               } else if (item.permeability > 600 && item.permeability <= 700) {
-                if (Number.isFinite(this.rowData1[20][variaa]) == true) {
-                  this.rowData1[20][variaa] += 1
-                } else { this.rowData1[20][variaa] = 0; this.rowData1[20][variaa] += 1 }
+                if (Number.isFinite(this.rowDataPerm[11][variaa]) == true) {
+                  this.rowDataPerm[11][variaa] += 1
+                } else { this.rowDataPerm[11][variaa] = 0; this.rowDataPerm[11][variaa] += 1 }
               } else if (item.permeability > 700 && item.permeability <= 800) {
-                if (Number.isFinite(this.rowData1[21][variaa]) == true) {
-                  this.rowData1[21][variaa] += 1
-                } else { this.rowData1[21][variaa] = 0; this.rowData1[21][variaa] += 1 }
+                if (Number.isFinite(this.rowDataPerm[12][variaa]) == true) {
+                  this.rowDataPerm[12][variaa] += 1
+                } else { this.rowDataPerm[12][variaa] = 0; this.rowDataPerm[12][variaa] += 1 }
               } else if (item.permeability > 800 && item.permeability <= 900) {
-                if (Number.isFinite(this.rowData1[22][variaa]) == true) {
-                  this.rowData1[22][variaa] += 1
-                } else { this.rowData1[22][variaa] = 0; this.rowData1[22][variaa] += 1 }
+                if (Number.isFinite(this.rowDataPerm[13][variaa]) == true) {
+                  this.rowDataPerm[13][variaa] += 1
+                } else { this.rowDataPerm[13][variaa] = 0; this.rowDataPerm[13][variaa] += 1 }
               } else if (item.permeability > 900 && item.permeability <= 1000) {
-                if (Number.isFinite(this.rowData1[23][variaa]) == true) {
-                  this.rowData1[23][variaa] += 1
-                } else { this.rowData1[23][variaa] = 0; this.rowData1[23][variaa] += 1 }
-              } else if (item.permeability > 1000) {
-                if (Number.isFinite(this.rowData1[24][variaa]) == true) {
-                  this.rowData1[24][variaa] += 1
-                } else { this.rowData1[24][variaa] = 0; this.rowData1[24][variaa] += 1 }
+                if (Number.isFinite(this.rowDataPerm[14][variaa]) == true) {
+                  this.rowDataPerm[14][variaa] += 1
+                } else { this.rowDataPerm[14][variaa] = 0; this.rowDataPerm[14][variaa] += 1 }
+              } else if (item.permeability > 1000 && item.permeability <= 2000) {
+                if (Number.isFinite(this.rowDataPerm[15][variaa]) == true) {
+                  this.rowDataPerm[15][variaa] += 1
+                } else { this.rowDataPerm[15][variaa] = 0; this.rowDataPerm[15][variaa] += 1 }
+              } else if (item.permeability > 2000 && item.permeability <= 3000) {
+                if (Number.isFinite(this.rowDataPerm[16][variaa]) == true) {
+                  this.rowDataPerm[16][variaa] += 1
+                } else { this.rowDataPerm[16][variaa] = 0; this.rowDataPerm[16][variaa] += 1 }
+              } else if (item.permeability > 3000 && item.permeability <= 4000) {
+                if (Number.isFinite(this.rowDataPerm[17][variaa]) == true) {
+                  this.rowDataPerm[17][variaa] += 1
+                } else { this.rowDataPerm[17][variaa] = 0; this.rowDataPerm[17][variaa] += 1 }
+              } else if (item.permeability > 4000 && item.permeability <= 5000) {
+                if (Number.isFinite(this.rowDataPerm[18][variaa]) == true) {
+                  this.rowDataPerm[18][variaa] += 1
+                } else { this.rowDataPerm[18][variaa] = 0; this.rowDataPerm[18][variaa] += 1 }
+              } else if (item.permeability > 5000 && item.permeability <= 6000) {
+                if (Number.isFinite(this.rowDataPerm[19][variaa]) == true) {
+                  this.rowDataPerm[19][variaa] += 1
+                } else { this.rowDataPerm[19][variaa] = 0; this.rowDataPerm[19][variaa] += 1 }
+              } else if (item.permeability > 6000 && item.permeability <= 7000) {
+                if (Number.isFinite(this.rowDataPerm[20][variaa]) == true) {
+                  this.rowDataPerm[20][variaa] += 1
+                } else { this.rowDataPerm[20][variaa] = 0; this.rowDataPerm[20][variaa] += 1 }
+              } else if (item.permeability > 7000 && item.permeability <= 8000) {
+                if (Number.isFinite(this.rowDataPerm[21][variaa]) == true) {
+                  this.rowDataPerm[21][variaa] += 1
+                } else { this.rowDataPerm[21][variaa] = 0; this.rowDataPerm[21][variaa] += 1 }
+              } else if (item.permeability > 8000 && item.permeability <= 9000) {
+                if (Number.isFinite(this.rowDataPerm[22][variaa]) == true) {
+                  this.rowDataPerm[22][variaa] += 1
+                } else { this.rowDataPerm[22][variaa] = 0; this.rowDataPerm[22][variaa] += 1 }
+              } else if (item.permeability > 9000 && item.permeability <= 10000) {
+                if (Number.isFinite(this.rowDataPerm[23][variaa]) == true) {
+                  this.rowDataPerm[23][variaa] += 1
+                } else { this.rowDataPerm[23][variaa] = 0; this.rowDataPerm[23][variaa] += 1 }
+              } else if (item.permeability > 10000) {
+                if (Number.isFinite(this.rowDataPerm[24][variaa]) == true) {
+                  this.rowDataPerm[24][variaa] += 1
+                } else { this.rowDataPerm[24][variaa] = 0; this.rowDataPerm[24][variaa] += 1 }
               }
             }
 

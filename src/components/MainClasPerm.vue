@@ -27,11 +27,7 @@
                     <AgGridPermJSON 
                         style="display: none;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
                     </AgGridPermJSON>
-                    <div id="aggrid" v-for="eortyp in eortypess" v-bind:key="eortyp">
-                    <AgGridPermJSON2 
-                    :eortype="eortyp" style="display: none;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
-                    </AgGridPermJSON2>
-                    </div>
+                    
                     
 
 
@@ -49,9 +45,16 @@
                 <h2><span class="firm"><strong>Permeability Impact On Oil Recovery</strong></span></h2>
                 <p>We present the in this charts the permeability impact on Oil recovery, we can see clearly that hight recovery factor correspond to high permeability. <br>&nbsp;</p>
                 <ul class="list_number">
-                
-                    <div id="myChart" class="ag-theme-alpine my-chart"></div>
-                    <div class="title">Chart 2 : Permeability Impact On Oil Recovery.</div>
+                    
+                    <div id="aggrid" v-for="(eortyp,ind) in eortypess" v-bind:key="ind">
+                    <AgGridPermJSON2 
+                    :eortype="eortyp" style="display: none;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
+                    </AgGridPermJSON2><br><br>
+                    <div :id=eortypp(eortyp) class="ag-theme-alpine my-chart"></div>
+                    <div class="title">Chart {{ind+1}} : Permeability Impact On Oil Recovery ({{eortyp}}).</div>
+                    </div>
+                   
+                    
 
                 </ul>
 
@@ -62,6 +65,7 @@
 
         </div>
     </div>
+    
 </template>
 
 <script>
@@ -80,6 +84,7 @@ export default {
 
     },
     data: () => ({
+        height: document.body.scrollHeight,
         items: [
 
 
@@ -93,12 +98,15 @@ export default {
         eortypess:[],
 
     }),
-    mounted() {
-
+    mounted() {     
         this.eortechnique()
 
     },
     methods:{
+        eortypp(varia){
+            return varia.replaceAll(' ', '_')
+        },
+        
         eortechnique() {
      
       

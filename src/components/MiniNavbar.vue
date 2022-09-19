@@ -42,13 +42,13 @@
                 
                     <li>
                         <div class="mainPage"><a href="#" onclick="return false;" @click="click9 = !click9"
-                                class="titel" :class="{ 'active': subIsActive(['/EorClasPerm','/EorClasPor','/EorClasRT']) }" >EOR Distribution By Properties</a></div>
+                                class="titel" :class="{ 'active': subIsActive(['/EorClasPerm','/EorClasPor','/EorClasRT','/EorClasSal','/EorClasVisc']) }" >EOR Distribution By Properties</a></div>
                         <ul class="pages" :class="{ open: click9 }">
                             <li><router-link to="/EorClasPerm" class="" @click="click6 = !click6">By Permeability</router-link></li>
                             <li><router-link to="/EorClasPor" class="" @click="click6 = !click6">By Porosity</router-link></li>
                             <li><router-link to="/EorClasRT"   class=""  @click="click6 = !click6"> By Reservoir Temperature</router-link></li>
-                            <li><a href="#" onclick="return false;"   class=""> By Salinity</a></li>
-                            <li><a href="#" onclick="return false;" class=""> By Oil Viscosity</a></li>
+                            <li><router-link to="/EorClasSal"   class="" @click="click6 = !click6"> By Salinity</router-link></li>
+                            <li><router-link to="/EorClasVisc" class="" @click="click6 = !click6"> By Oil Viscosity</router-link></li>
                         
                         </ul>
                     </li>

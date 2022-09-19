@@ -32,6 +32,7 @@ export default {
     fnn: Number,
     Text11: String,
     eortype: String,
+    
 
   },
   data() {
@@ -110,7 +111,7 @@ export default {
 
       }).then(response => {
         response.data.forEach((item) => {
-          if ((Number.isFinite(item.average_permeability_md) == true)) { if ((item.eor_type !== null)){
+          if ((Number.isFinite(item.average_permeability_md) == true)&& (Number.isFinite(item.incremental_eor_recovery_factor_fraction) == true)) { if ((item.eor_type !== null)){
             rowDataa.push({ field: item.field + " " + item.pool_name, Recovery_factor: item.incremental_eor_recovery_factor_fraction, permeability: item.average_permeability_md, eor_type: item.eor_type })
             // ,this.rowData.push({ field: item.field + " " + item.pool_name, Recovery_factor: item.incremental_eor_recovery_factor_fraction, permeability: item.average_permeability_md, eor_type: item.eor_type })
           }}
@@ -124,6 +125,8 @@ export default {
       return rowDataa 
     
     },
+    
+
     onFirstDataRendered(params) {
       var createRangeChartParams = {
         cellRange: {
@@ -139,7 +142,7 @@ export default {
           { colId: 'permeability', chartType: 'line', secondaryAxis: true }
         ],
         suppressChartRanges: true,
-        chartContainer: document.querySelector('#myChart'),
+        chartContainer: document.querySelector('#'+this.eortype.replaceAll(' ', '_')),
         aggFunc: 'sum',
       };
 
@@ -157,5 +160,8 @@ export default {
 </script>
 
 <style>
+.my-chart11 {
+  height: auto;
 
+}
 </style>
