@@ -65,7 +65,7 @@ export default {
         getCountry() {
             axios({
                 method: 'get',
-                url: 'https://sheordatabase.herokuapp.com/Country',
+                url: '/Country',
                 auth: {
                     username: 'admin',
                     password: 'admineoradmin'
@@ -77,7 +77,7 @@ export default {
         getCaseStudies() {
             axios({
                 method: 'get',
-                url: 'https://sheordatabase.herokuapp.com/CaseStudies/?country=' + this.country +'&eortype=' + this.eortype,
+                url: '/CaseStudies/?country=' + this.country +'&eortype=' + this.eortype,
                 auth: {
                     username: 'admin',
                     password: 'admineoradmin'

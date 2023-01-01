@@ -22,6 +22,7 @@ import "ag-grid-community/styles//ag-theme-alpine.css";
 import { AgGridVue } from "ag-grid-vue3";
 import { ModuleRegistry } from 'ag-grid-community';
 import { GridChartsModule, MenuModule, RowGroupingModule } from 'ag-grid-enterprise';
+
 // import {ref} from "vue";
 
 
@@ -54,7 +55,7 @@ export default {
   // let rowData = 
   data() {
     return {
-
+      
       rowData: null,
       rowdataaaa: null,
       rowdata: [],
@@ -165,6 +166,8 @@ export default {
 
   },
   methods: {
+    
+      
     createnew(neww){
       var variable=null
       variable=neww
@@ -181,7 +184,7 @@ export default {
       
       axios({
         method: 'get',
-        url: 'https://sheordatabase.herokuapp.com/EORTechniques/',
+        url: '/EORTechniques/',
 
 
         auth: {
@@ -201,7 +204,7 @@ export default {
       var rowDataa = [];
       axios({
         method: 'get',
-        url: 'https://sheordatabase.herokuapp.com/CaseStudies/',
+        url: '/CaseStudies/',
 
 
         auth: {
@@ -349,7 +352,7 @@ export default {
       var rowdataa = ['permrange',];
       axios({
         method: 'get',
-        url: 'https://sheordatabase.herokuapp.com/EORTechniques/',
+        url: '/EORTechniques/',
 
 
         auth: {

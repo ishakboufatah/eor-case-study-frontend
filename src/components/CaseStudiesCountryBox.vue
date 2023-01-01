@@ -80,7 +80,7 @@ export default {
         getCaseStudies() {
             axios({
                 method: 'get',
-                url: 'https://sheordatabase.herokuapp.com/CaseStudies/?eortype='+this.$route.params.EORTechnique,
+                url: '/CaseStudies/?eortype='+this.$route.params.EORTechnique,
                 auth: {
                     username: 'admin',
                     password: 'admineoradmin'

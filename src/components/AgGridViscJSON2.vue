@@ -101,17 +101,16 @@
           
         axios({
           method: 'get',
-          url: 'https://sheordatabase.herokuapp.com/CaseStudies/?eortype=' + varia,
+          url: '/CaseStudies/?eortype=' + varia,
   
   
           auth: {
             username: 'admin',
             password: 'admineoradmin'
           },
-          // && (Number.isFinite(item.incremental_eor_recovery_factor_fraction) == true)
         }).then(response => {
           response.data.forEach((item) => {
-            if ((Number.isFinite(item.oil_viscosity_15c_cp) == true)) { if ((item.eor_type !== null)){
+            if ((Number.isFinite(item.oil_viscosity_15c_cp) == true)&& (Number.isFinite(item.incremental_eor_recovery_factor_fraction) == true)) { if ((item.eor_type !== null)){
               rowDataa.push({ field: item.field + " " + item.pool_name, Recovery_factor: item.incremental_eor_recovery_factor_fraction, permeability: item.oil_viscosity_15c_cp, eor_type: item.eor_type })
               // ,this.rowData.push({ field: item.field + " " + item.pool_name, Recovery_factor: item.incremental_eor_recovery_factor_fraction, permeability: item.average_permeability_md, eor_type: item.eor_type })
             }}

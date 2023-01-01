@@ -22,29 +22,26 @@
 
                 <h2><span class="firm"><strong>Permeability Range Distribution</strong></span></h2>
                 <p>We present the in chart 1 the number of Case Studies Classified by permeability Range.  <br>&nbsp;</p>
-                <ul class="list_number">
+                <!-- <ul class="list_number">
 
                     <AgGridPermJSON 
                         style="display: none;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
                     </AgGridPermJSON>
-                    
-                    
-
-
-
-
-
-
-
-                </ul>
-                <ul class="list_number">
                     <div id="myChart1" class="ag-theme-alpine my-chart"></div>
+                </ul> -->
+                
+                <ul class="list_number">
+                   
+                    <ChartjsPerm></ChartjsPerm>
+                    <div class="chart-container" style="position: relative;background: #fff;" ><canvas id="chart" ></canvas></div>
                     <div class="title">Chart 1 : Case Studies Number Classified by Permeability Range.</div>
+                    
 
                 </ul>
+                
                 <h2><span class="firm"><strong>Permeability Impact On Oil Recovery</strong></span></h2>
-                <p>We present the in this charts the permeability impact on Oil recovery, we can see clearly that hight recovery factor correspond to high permeability. <br>&nbsp;</p>
-                <ul class="list_number">
+                <p>We present the in this charts the permeability impact on Oil recovery, we can see clearly that high recovery factor correspond to high permeability. <br>&nbsp;</p>
+                <!-- <ul class="list_number">
                     
                     <div id="aggrid" v-for="(eortyp,ind) in eortypess" v-bind:key="ind">
                     <AgGridPermJSON2 
@@ -53,6 +50,21 @@
                     <div :id=eortypp(eortyp) class="ag-theme-alpine my-chart"></div>
                     <div class="title">Chart {{ind+1}} : Permeability Impact On Oil Recovery ({{eortyp}}).</div>
                     </div>
+                    
+                 
+                </ul> -->
+                <ul class="list_number">
+                    
+                    <div id="aggrid" v-for="(eortyp,ind) in eortypess" v-bind:key="ind">
+                    
+                    
+                    <div class="chart-container" style="position: relative;background: #fff;" ><canvas :id=eortypp(eortyp) ></canvas></div>
+                    <ChartjsPermRF :eortype="eortyp" ></ChartjsPermRF>
+                    <div class="title">Chart {{ind+1}} : Permeability Impact On Oil Recovery ({{eortyp}}).</div>
+                    </div>
+                    <!-- <BarChart></BarChart> -->
+                    
+                    
                    
                     
 
@@ -70,13 +82,27 @@
 
 <script>
 import axios from 'axios';
-import AgGridPermJSON from '@/components/AgGridPermJSON.vue';
-import AgGridPermJSON2 from '@/components/AgGridPermJSON2.vue';
+// import AgGridPermJSON from '@/components/AgGridPermJSON.vue';
+// import AgGridPermJSON2 from '@/components/AgGridPermJSON2.vue';
+import ChartjsPerm from '@/components/ChartjsPerm.vue';
+import ChartjsPermRF from '@/components/ChartjsPermRF.vue';
+// import BarChart from '@/components/BarChart.vue'
+// import readXlsxFile from 'read-excel-file'
+
+// import Utils from 'chart.js/auto';
+
+// import { getRelativePosition } from 'chart.js/helpers';
+
+
 export default {
     name: 'MainClasPerm',
     components: {
-        AgGridPermJSON,
-        AgGridPermJSON2
+        // AgGridPermJSON,
+        // AgGridPermJSON2,
+        ChartjsPerm,
+        ChartjsPermRF
+        // BarChart,
+        
 
 
     },
@@ -89,20 +115,30 @@ export default {
 
 
         ],
-        eortype:'Miscible EOR',
+        eortype:['Miscible EOR','Chemical EOR','Thermal EOR','WAG EOR'],
         hover1: false,
         hover2: false,
         hover3: false,
         hover4: false,
         hover5: false,
         eortypess:[],
+        
+        
 
     }),
     mounted() {     
         this.eortechnique()
+        // this.onFileChange()
+       
 
     },
     methods:{
+        // onFileChange() {
+        //     var file = 'data.xlsx';
+        //     readXlsxFile(file).then((data) => {
+        //         console.log(data)
+        //     })
+        // },
         eortypp(varia){
             return varia.replaceAll(' ', '_')
         },
@@ -112,7 +148,7 @@ export default {
       
       axios({
         method: 'get',
-        url: 'https://sheordatabase.herokuapp.com/EORTechniques/',
+        url: '/EORTechniques/',
 
 
         auth: {
@@ -127,6 +163,7 @@ export default {
 
       })
     },
+    
     }
 }
 

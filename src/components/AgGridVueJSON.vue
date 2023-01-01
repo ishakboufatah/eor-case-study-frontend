@@ -94,7 +94,7 @@ export default {
     
             axios({
                 method: 'get',
-                url: 'https://sheordatabase.herokuapp.com/CaseStudies/?country=' + this.country +'&eortype=' + this.eortype,
+                url: '/CaseStudies/?country=' + this.country +'&eortype=' + this.eortype,
                 
                 
                 auth: {

@@ -182,7 +182,7 @@
           
           axios({
             method: 'get',
-            url: 'https://sheordatabase.herokuapp.com/EORTechniques/',
+            url: '/EORTechniques/',
     
     
             auth: {
@@ -202,7 +202,7 @@
           var rowDataa = [];
           axios({
             method: 'get',
-            url: 'https://sheordatabase.herokuapp.com/CaseStudies/',
+            url: '/CaseStudies/',
     
     
             auth: {
@@ -350,7 +350,7 @@
           var rowdataa = ['permrange',];
           axios({
             method: 'get',
-            url: 'https://sheordatabase.herokuapp.com/EORTechniques/',
+            url: '/EORTechniques/',
     
     
             auth: {

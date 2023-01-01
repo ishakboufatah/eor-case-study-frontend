@@ -43,7 +43,7 @@
 
                 </ul>
                 <h2><span class="firm"><strong>Salinity Impact On Oil Recovery</strong></span></h2>
-                <p>We present the in this charts the salinity impact on Oil recovery, we can see clearly that hight recovery factor correspond to low salinity. <br>&nbsp;</p>
+                <p>We present the in this charts the salinity impact on Oil recovery, we can see clearly that high recovery factor correspond to low salinity. <br>&nbsp;</p>
                 <ul class="list_number">
                     
                     <div id="aggrid" v-for="(eortyp,ind) in eortypess" v-bind:key="ind">
@@ -112,7 +112,7 @@ export default {
       
       axios({
         method: 'get',
-        url: 'https://sheordatabase.herokuapp.com/EORTechniques/',
+        url: '/EORTechniques/',
 
 
         auth: {

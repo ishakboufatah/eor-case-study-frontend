@@ -101,7 +101,7 @@
           
         axios({
           method: 'get',
-          url: 'https://sheordatabase.herokuapp.com/CaseStudies/?eortype=' + varia,
+          url: '/CaseStudies/?eortype=' + varia,
   
   
           auth: {

@@ -1,8 +1,13 @@
 const columnDefs= [
     { headerName: "Proprty", field: "proprty" , resizable: true , width: 420},
     { headerName: "Value", field: "value" , resizable: true , width: 300},
-    
+   
   ],
+//  var fieldName=[{'a1','a2','a3',"a4"},
+//  {100,500,50,15},{}],
+//   var perm=[100,500,50,15],
+//   var poro=[18],
+
   rowData= [[[{ proprty: "Field", value: "Acheson"},
     { proprty: "Pool Name", value: "D-3 A"},
     { proprty: "Formation", value: "Leduc"},
@@ -113,12 +118,6 @@ const columnDefs= [
     { proprty: "EOR 3", value: ""},
     { proprty: "EOR 4", value: ""},
     { proprty: "Reservoir Fluid Properties and Reservoir Parameters", value: ""},
-    { proprty: "Depth (m)", value: 2337.2},
-    { proprty: "Average Pay Thickness (m)", value: 49.24},
-    { proprty: "Average Permeability (md)", value: 1068.57},
-    { proprty: "Average Porosity", value: 0.067},
-    { proprty: "Water Saturation", value: 0.22},
-    { proprty: "Lithology", value: "Carbonate"},
     { proprty: "Initial Pressure (kPa)", value: 21024},
     { proprty: "Initial Temperature (C)", value: 76},
     { proprty: "Oil Gravity (API)", value: 38.16},

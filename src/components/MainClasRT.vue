@@ -106,7 +106,7 @@ export default {
       
       axios({
         method: 'get',
-        url: 'https://sheordatabase.herokuapp.com/EORTechniques/',
+        url: '/EORTechniques/',
 
 
         auth: {

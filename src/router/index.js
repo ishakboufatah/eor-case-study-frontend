@@ -9,6 +9,7 @@ import EorClasRT from '../views/EorClasRT.vue'
 import EorClasSal from '../views/EorClasSal.vue'
 import EorClasVisc from '../views/EorClasVisc.vue'
 import EorClasWorldwide from '../views/EorClasWorldwide.vue'
+import NewPage from '../views/NewPage.vue'
 
 
 const routes = [
@@ -35,6 +36,10 @@ const routes = [
   { path: '/EorDatabase', 
   name: 'EorDatabase',
   component: EorDatabase,
+}, 
+{ path: '/NewPage', 
+name: 'NewPage',
+component: NewPage,
 }, 
  {
   path: '/MiscibleCaseStadies',
