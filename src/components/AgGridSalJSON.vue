@@ -330,27 +330,27 @@
                   } else if (item.permeability > 250000 && item.permeability <= 260000) {
                     if (Number.isFinite(this.rowDataSal[25][variaa]) == true) {
                       this.rowDataSal[24][variaa] += 1
-                    } else { this.rowDataSal[24][variaa] = 0; this.rowDataSal[24][variaa] += 1 }
+                    } else { this.rowDataSal[25][variaa] = 0; this.rowDataSal[25][variaa] += 1 }
                   } else if (item.permeability > 260000 && item.permeability <= 270000) {
                     if (Number.isFinite(this.rowDataSal[26][variaa]) == true) {
                       this.rowDataSal[24][variaa] += 1
-                    } else { this.rowDataSal[24][variaa] = 0; this.rowDataSal[24][variaa] += 1 }
+                    } else { this.rowDataSal[26][variaa] = 0; this.rowDataSal[26][variaa] += 1 }
                   } else if (item.permeability > 270000 && item.permeability <= 280000) {
                     if (Number.isFinite(this.rowDataSal[27][variaa]) == true) {
                       this.rowDataSal[24][variaa] += 1
-                    } else { this.rowDataSal[24][variaa] = 0; this.rowDataSal[24][variaa] += 1 }
+                    } else { this.rowDataSal[27][variaa] = 0; this.rowDataSal[27][variaa] += 1 }
                   } else if (item.permeability > 280000 && item.permeability <= 290000) {
                     if (Number.isFinite(this.rowDataSal[28][variaa]) == true) {
                       this.rowDataSal[24][variaa] += 1
-                    } else { this.rowDataSal[24][variaa] = 0; this.rowDataSal[24][variaa] += 1 }
+                    } else { this.rowDataSal[28][variaa] = 0; this.rowDataSal[28][variaa] += 1 }
                   } else if (item.permeability > 290000 && item.permeability <= 300000) {
                     if (Number.isFinite(this.rowDataSal[29][variaa]) == true) {
                       this.rowDataSal[24][variaa] += 1
-                    } else { this.rowDataSal[24][variaa] = 0; this.rowDataSal[24][variaa] += 1 }
+                    } else { this.rowDataSal[29][variaa] = 0; this.rowDataSal[29][variaa] += 1 }
                   } else if (item.permeability > 300000 ) {
                     if (Number.isFinite(this.rowDataSal[30][variaa]) == true) {
                       this.rowDataSal[24][variaa] += 1
-                    } else { this.rowDataSal[24][variaa] = 0; this.rowDataSal[24][variaa] += 1 }
+                    } else { this.rowDataSal[30][variaa] = 0; this.rowDataSal[30][variaa] += 1 }
                   } 
                 }
     

@@ -22,29 +22,23 @@
 
                 <h2><span class="firm"><strong>Salinity Range Distribution</strong></span></h2>
                 <p>We present the in chart 1 the number of Case Studies Classified by Salinity.  <br>&nbsp;</p>
-                <ul class="list_number">
+                <!-- <ul class="list_number">
 
                     <AgGridSalJSON 
                         style="display: none;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
                     </AgGridSalJSON>
-                    
-                    
-
-
-
-
-
-
-
-                </ul>
-                <ul class="list_number">
                     <div id="myChart1" class="ag-theme-alpine my-chart"></div>
+                </ul> -->
+
+                <ul class="list_number">
+                    <ChartjsSal></ChartjsSal>
+                    <div class="chart-container" style="position: relative;background: #fff;height:500px" ><canvas id="chart" ></canvas></div>
                     <div class="title">Chart 1 : Case Studies Number Classified by Salinity.</div>
 
                 </ul>
                 <h2><span class="firm"><strong>Salinity Impact On Oil Recovery</strong></span></h2>
                 <p>We present the in this charts the salinity impact on Oil recovery, we can see clearly that high recovery factor correspond to low salinity. <br>&nbsp;</p>
-                <ul class="list_number">
+                <!-- <ul class="list_number">
                     
                     <div id="aggrid" v-for="(eortyp,ind) in eortypess" v-bind:key="ind">
                     <AgGridSalJSON2 
@@ -56,6 +50,15 @@
                    
                     
 
+                </ul> -->
+
+                <ul class="list_number">
+                    
+                    <div id="aggrid" v-for="(eortyp,ind) in eortypess" v-bind:key="ind">
+                    <div class="chart-" style="background: #fff ;height:500px" ><canvas :id=eortypp(eortyp) ></canvas></div>
+                    <ChartjsSalRF :eortype="eortyp" ></ChartjsSalRF>
+                    <div class="title">Chart {{ind+1}} : Salinity Impact On Oil Recovery ({{eortyp}}).</div>
+                    </div>
                 </ul>
 
             </div>
@@ -70,13 +73,17 @@
 
 <script>
 import axios from 'axios';
-import AgGridSalJSON from '@/components/AgGridSalJSON.vue';
-import AgGridSalJSON2 from '@/components/AgGridSalJSON2.vue';
+// import AgGridSalJSON from '@/components/AgGridSalJSON.vue';
+// import AgGridSalJSON2 from '@/components/AgGridSalJSON2.vue';
+import ChartjsSal from '@/components/ChartjsSal.vue';
+import ChartjsSalRF from '@/components/ChartjsSalRF.vue';
 export default {
     name: 'MainClasPerm',
     components: {
-        AgGridSalJSON,
-        AgGridSalJSON2
+        // AgGridSalJSON,
+        // AgGridSalJSON2,
+        ChartjsSalRF,
+        ChartjsSal
 
 
     },
