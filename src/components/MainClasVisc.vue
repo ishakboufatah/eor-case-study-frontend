@@ -22,29 +22,24 @@
 
                 <h2><span class="firm"><strong>Oil Viscosity Range Distribution</strong></span></h2>
                 <p>We present the in chart 1 the number of Case Studies Classified by Oil Viscosity Range.  <br>&nbsp;</p>
-                <ul class="list_number">
+                <!-- <ul class="list_number">
 
                     <AgGridViscJSON 
                         style="display: none;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
                     </AgGridViscJSON>
-                    
-                    
-
-
-
-
-
-
-
-                </ul>
-                <ul class="list_number">
                     <div id="myChart1" class="ag-theme-alpine my-chart"></div>
+                </ul> -->
+
+
+                <ul class="list_number">
+                    <ChartjsVisc></ChartjsVisc>
+                    <div class="chart-container" style="position: relative;background: #fff;height:500px" ><canvas id="chart" ></canvas></div>
                     <div class="title">Chart 1 : Case Studies Number Classified by Oil Viscosity Range.</div>
 
                 </ul>
                 <h2><span class="firm"><strong>Oil Viscosity Impact On Oil Recovery</strong></span></h2>
                 <p>We present the in this charts the Oil Viscosity impact on Oil recovery. <br>&nbsp;</p>
-                <ul class="list_number">
+                <!-- <ul class="list_number">
                     
                     <div id="aggrid" v-for="(eortyp,ind) in eortypess" v-bind:key="ind">
                     <AgGridViscJSON2 
@@ -53,9 +48,15 @@
                     <div :id=eortypp(eortyp) class="ag-theme-alpine my-chart"></div>
                     <div class="title">Chart {{ind+1}} : Oil viscosity Impact On Oil Recovery ({{eortyp}}).</div>
                     </div>
-                   
-                    
+                </ul> -->
 
+                <ul class="list_number">
+                    
+                    <div id="aggrid" v-for="(eortyp,ind) in eortypess" v-bind:key="ind">
+                    <div class="chart-" style="background: #fff ;height:500px" ><canvas :id=eortypp(eortyp) ></canvas></div>
+                    <ChartjsViscRF :eortype="eortyp" ></ChartjsViscRF>
+                    <div class="title">Chart {{ind+1}} : Oil viscosity Impact On Oil Recovery ({{eortyp}}).</div>
+                    </div>
                 </ul>
 
             </div>
@@ -70,13 +71,17 @@
 
 <script>
 import axios from 'axios';
-import AgGridViscJSON from '@/components/AgGridViscJSON.vue';
-import AgGridViscJSON2 from '@/components/AgGridViscJSON2.vue';
+// import AgGridViscJSON from '@/components/AgGridViscJSON.vue';
+// import AgGridViscJSON2 from '@/components/AgGridViscJSON2.vue';
+import ChartjsVisc from '@/components/ChartjsVisc.vue';
+import ChartjsViscRF from '@/components/ChartjsViscRF.vue';
 export default {
     name: 'MainClasPerm',
     components: {
-        AgGridViscJSON,
-        AgGridViscJSON2
+        // AgGridViscJSON,
+        // AgGridViscJSON2,
+        ChartjsVisc, 
+        ChartjsViscRF
 
 
     },
