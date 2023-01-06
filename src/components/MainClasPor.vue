@@ -54,18 +54,10 @@
                 <ul class="list_number">
                     
                     <div id="aggrid" v-for="(eortyp,ind) in eortypess" v-bind:key="ind">
-                    
-                    
                     <div class="chart-" style="background: #fff ;height:500px" ><canvas :id=eortypp(eortyp) ></canvas></div>
                     <ChartjsPorRF :eortype="eortyp" ></ChartjsPorRF>
                     <div class="title">Chart {{ind+1}} : Porosity Impact On Oil Recovery ({{eortyp}}).</div>
                     </div>
-                    
-                    
-                    
-                   
-                    
-
                 </ul>
 
             </div>

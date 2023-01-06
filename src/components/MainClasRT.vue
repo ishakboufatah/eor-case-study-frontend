@@ -22,28 +22,22 @@
 
                 <h2><span class="firm"><strong>Reservoir Temperature Impact On Oil Recovery</strong></span></h2>
                 <p>We present the in chart 3 the Case Studies number Classified by Reservoir Temperature Range. <br>&nbsp;</p>
-                <ul class="list_number">
+                <!-- <ul class="list_number">
 
                     <AgGridRTJSON fnn=4
                         style="display: none;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
                     </AgGridRTJSON>
-                    
-
-
-
-
-
-
-
-                </ul>
-                <ul class="list_number">
                     <div id="myChart1" class="ag-theme-alpine my-chart"></div>
+                </ul> -->
+                <ul class="list_number">
+                    <ChartjsRT></ChartjsRT>
+                    <div class="chart-container" style="position: relative;background: #fff;height:500px" ><canvas id="chart" ></canvas></div>
                     <div class="title">Chart 1 : Reservoir Temperature Impact On Oil Recovery</div>
 
                 </ul>
                 <h2><span class="firm"><strong>Reservoir Temperature Impact On Oil Recovery</strong></span></h2>
                 <p>We present the in chart 1 the Reservoir Temperature impact on Oil recovery  <br>&nbsp;</p>
-                <ul class="list_number">
+                <!-- <ul class="list_number">
                 
                     <div id="aggrid" v-for="(eortyp,ind) in eortypess" v-bind:key="ind">
                     <AgGridRTJSON2 
@@ -53,6 +47,14 @@
                     <div class="title">Chart {{ind+1}} : Reservoir Temperature Impact On Oil Recovery ({{eortyp}}).</div>
                     </div>
 
+                </ul> -->
+                <ul class="list_number">
+                    
+                    <div id="aggrid" v-for="(eortyp,ind) in eortypess" v-bind:key="ind">
+                    <div class="chart-" style="background: #fff ;height:500px" ><canvas :id=eortypp(eortyp) ></canvas></div>
+                    <ChartjsRTRF :eortype="eortyp" ></ChartjsRTRF>
+                    <div class="title">Chart {{ind+1}} : Reservoir Temperature Impact On Oil Recovery ({{eortyp}}).</div>
+                    </div>
                 </ul>
 
             </div>
@@ -66,13 +68,17 @@
 
 <script>
 import axios from 'axios';
-import AgGridRTJSON from '@/components/AgGridRTJSON.vue';
-import AgGridRTJSON2 from '@/components/AgGridRTJSON2.vue';
+// import AgGridRTJSON from '@/components/AgGridRTJSON.vue';
+import ChartjsRT from '@/components/ChartjsRT.vue';
+import ChartjsRTRF from '@/components/ChartjsRTRF.vue';
+// import AgGridRTJSON2 from '@/components/AgGridRTJSON2.vue';
 export default {
     name: 'MainClasRT',
     components: {
-        AgGridRTJSON,
-        AgGridRTJSON2,
+        // AgGridRTJSON,
+        // AgGridRTJSON2,
+        ChartjsRT,
+        ChartjsRTRF,
 
 
     },
