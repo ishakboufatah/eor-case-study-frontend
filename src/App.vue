@@ -1,6 +1,7 @@
 <template>
-  <full-navbar v-if="windowWidth > 1093"></full-navbar>
   <mini-navbar v-if="windowWidth < 1093"></mini-navbar>
+  <full-navbar v-else></full-navbar>
+  
   <router-view/>
 </template>
 <script>

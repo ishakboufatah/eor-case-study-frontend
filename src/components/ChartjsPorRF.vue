@@ -21,7 +21,7 @@
    
    
    export default {
-     name: "ChartjsPermRF",
+     name: "ChartjsPorRF",
 
      props: {
        fieldnumber: Number,
@@ -83,7 +83,7 @@
              order: 1},
    
              {label: 'permeability',
-             data: data.map(row => row.permeability),
+             data: data.map(row => row.porosity),
              backgroundColor: '#fba71b',
              borderColor: '#B07513',
              borderWidth: 1,
@@ -135,7 +135,7 @@
              title: {
           // color: 'red',
           display: true,
-          text: 'permeability (md)'
+          text: 'porisity (fraction)'
         }
              }
      }}
@@ -160,8 +160,8 @@
 
       }).then(response => {
         response.data.forEach((item) => {
-          if ((Number.isFinite(item.average_permeability_md) == true)&& (Number.isFinite(item.incremental_eor_recovery_factor_fraction) == true)) { if ((item.eor_type !== null)){
-            rowDataa.push({ field: item.field + " " + item.pool_name, Recovery_factor: item.incremental_eor_recovery_factor_fraction, permeability: item.average_permeability_md, eor_type: item.eor_type })
+          if ((Number.isFinite(item.average_porosity) == true)&& (Number.isFinite(item.incremental_eor_recovery_factor_fraction) == true)) { if ((item.eor_type !== null)){
+            rowDataa.push({ field: item.field + " " + item.pool_name, Recovery_factor: item.incremental_eor_recovery_factor_fraction, porosity: item.average_porosity, eor_type: item.eor_type })
             // ,this.rowData.push({ field: item.field + " " + item.pool_name, Recovery_factor: item.incremental_eor_recovery_factor_fraction, permeability: item.average_permeability_md, eor_type: item.eor_type })
           }}
         });this.chartfanc(rowDataa)

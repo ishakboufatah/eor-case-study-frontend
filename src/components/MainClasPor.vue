@@ -22,28 +22,24 @@
 
                 <h2><span class="firm"><strong>Porosity Range Distribution</strong></span></h2>
                 <p>We present the in chart 1 the number of Case Studies Classified by Porosity Range.  <br>&nbsp;</p>
-                <ul class="list_number">
 
+                <!-- <ul class="list_number">
                     <AgGridPorJSON fnn=4
                         style="display: none;margin-left: auto;margin-right: auto;margin-bottom: 10px;margin-top: 20px;">
                     </AgGridPorJSON>
-                    
-
-
-
-
-
-
-
-                </ul>
-                <ul class="list_number">
                     <div id="myChart1" class="ag-theme-alpine my-chart"></div>
+                </ul> -->
+
+                <ul class="list_number">
+                    <ChartjsPor></ChartjsPor>
+                    <div class="chart-container" style="position: relative;background: #fff;height:500px" ><canvas id="chart" ></canvas></div>
                     <div class="title">Chart 1 : porosity Impact On Oil Recovery</div>
 
                 </ul>
+                
                 <h2><span class="firm"><strong>Porosity Impact On Oil Recovery</strong></span></h2>
                 <p>We present the in this charts the Porosity impact on Oil recovery. <br>&nbsp;</p>
-                <ul class="list_number">
+                <!-- <ul class="list_number">
                 
                     <div id="aggrid" v-for="(eortyp,ind) in eortypess" v-bind:key="ind">
                     <AgGridPorJSON2 
@@ -52,6 +48,23 @@
                     <div :id=eortypp(eortyp) class="ag-theme-alpine my-chart"></div>
                     <div class="title">Chart {{ind+1}} : porosity Impact On Oil Recovery ({{eortyp}}).</div>
                     </div>
+
+                </ul> -->
+
+                <ul class="list_number">
+                    
+                    <div id="aggrid" v-for="(eortyp,ind) in eortypess" v-bind:key="ind">
+                    
+                    
+                    <div class="chart-" style="background: #fff ;height:500px" ><canvas :id=eortypp(eortyp) ></canvas></div>
+                    <ChartjsPorRF :eortype="eortyp" ></ChartjsPorRF>
+                    <div class="title">Chart {{ind+1}} : Porosity Impact On Oil Recovery ({{eortyp}}).</div>
+                    </div>
+                    
+                    
+                    
+                   
+                    
 
                 </ul>
 
@@ -66,14 +79,18 @@
 
 <script>
 import axios from 'axios';
-import AgGridPorJSON from '@/components/AgGridPorJSON.vue';
-import AgGridPorJSON2 from '@/components/AgGridPorJSON2.vue';
+// import AgGridPorJSON from '@/components/AgGridPorJSON.vue';
+import ChartjsPor from '@/components/ChartjsPor.vue';
+import ChartjsPorRF from '@/components/ChartjsPorRF.vue';
+// import AgGridPorJSON2 from '@/components/AgGridPorJSON2.vue';
 
 export default {
     name: 'MainClasPor',
     components: {
-        AgGridPorJSON,
-        AgGridPorJSON2,
+        // AgGridPorJSON,
+        // AgGridPorJSON2,
+        ChartjsPor,
+        ChartjsPorRF
 
 
     },

@@ -147,7 +147,8 @@
         },
         options:{
           responsive: true,
-          aspectRatio:1.6,
+          maintainAspectRatio: false,
+          aspectRatio:1,
           plugins: {
         title: {
           display: true,

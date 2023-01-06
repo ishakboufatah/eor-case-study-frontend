@@ -33,7 +33,7 @@
                 <ul class="list_number">
                    
                     <ChartjsPerm></ChartjsPerm>
-                    <div class="chart-container" style="position: relative;background: #fff;" ><canvas id="chart" ></canvas></div>
+                    <div class="chart-container" style="position: relative;background: #fff;height:500px" ><canvas id="chart" ></canvas></div>
                     <div class="title">Chart 1 : Case Studies Number Classified by Permeability Range.</div>
                     
 
@@ -58,7 +58,7 @@
                     <div id="aggrid" v-for="(eortyp,ind) in eortypess" v-bind:key="ind">
                     
                     
-                    <div class="chart-container" style="position: relative;background: #fff;" ><canvas :id=eortypp(eortyp) ></canvas></div>
+                    <div class="chart-" style="background: #fff ;height:500px" ><canvas :id=eortypp(eortyp) ></canvas></div>
                     <ChartjsPermRF :eortype="eortyp" ></ChartjsPermRF>
                     <div class="title">Chart {{ind+1}} : Permeability Impact On Oil Recovery ({{eortyp}}).</div>
                     </div>

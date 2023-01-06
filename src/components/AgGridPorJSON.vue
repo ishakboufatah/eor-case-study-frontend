@@ -212,7 +212,7 @@
     
           }).then(response => {
             response.data.forEach((item) => {
-              if ((Number.isFinite(item.average_permeability_md) == true)) {
+              if ((Number.isFinite(item.average_porosity) == true)) {
                 rowDataa.push({ field: item.field + " " + item.pool_name, Recovery_factor: item.incremental_eor_recovery_factor_fraction, permeability: item.average_porosity, eor_type: item.eor_type })
               }
             }); this.rowData = rowDataa;
