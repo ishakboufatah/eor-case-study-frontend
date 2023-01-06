@@ -82,7 +82,7 @@
              yAxisID: 'y',
              order: 1},
    
-             {label: 'permeability',
+             {label: 'Porisity',
              data: data.map(row => row.porosity),
              backgroundColor: '#fba71b',
              borderColor: '#B07513',

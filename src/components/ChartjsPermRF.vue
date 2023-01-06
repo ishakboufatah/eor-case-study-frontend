@@ -82,7 +82,7 @@
              yAxisID: 'y',
              order: 1},
    
-             {label: 'permeability',
+             {label: 'Permeability',
              data: data.map(row => row.permeability),
              backgroundColor: '#fba71b',
              borderColor: '#B07513',

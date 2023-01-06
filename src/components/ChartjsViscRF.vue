@@ -67,7 +67,7 @@
              yAxisID: 'y',
              order: 1},
    
-             {label: 'Oil Viscosity (cp)',
+             {label: 'Oil Viscosity',
              data: data.map(row => row.Visc),
              backgroundColor: '#fba71b',
              borderColor: '#B07513',

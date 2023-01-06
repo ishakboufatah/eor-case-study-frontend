@@ -67,7 +67,7 @@
              yAxisID: 'y',
              order: 1},
    
-             {label: 'Reservoir Temperature (C)',
+             {label: 'Salinity',
              data: data.map(row => row.Sal),
              backgroundColor: '#fba71b',
              borderColor: '#B07513',
